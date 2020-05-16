@@ -711,7 +711,7 @@ function Options_form.create_window()
   Options_form.form = forms.newform(form_width, form_height, "OPTIONS")
   -- Set form location based on the emu window
   local emu_window_x, emu_window_y = client.xpos(), client.ypos()
-  forms.setlocation(Options_form.form, emu_window_x, emu_window_y + client.screenheight() + 77)
+  --forms.setlocation(Options_form.form, emu_window_x, emu_window_y + client.screenheight() + 77)
   
   local xform, yform, delta_x, delta_y = 4, 4, 120, 20
   
