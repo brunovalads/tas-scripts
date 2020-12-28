@@ -1,0 +1,482 @@
+
+$0035 (1 bytes) - Not sure but always 4 when inside level, always 1 when not.
+
+$0199 (? bytes) - Can serve as a flag for jumping.
+
+$01E6 (2 bytes) - Controller inputs when paused.
+
+$0232 (2 bytes) - Flag for activated secret Level Select.
+
+$0254 (2 bytes) - Current level option in the secret Level Select screen.
+
+$0268 (2 bytes) - Current diffulty: 0 = easy (4 lives, 5 hats), 1 = normal (3 lives, 4 hats), 2 = hard (2 lives, 3 hats). This address is read at $818C4D when Santa start shooting magic or a sprite start shoting a projectile, but the purpose is unknown.
+$026A (2 bytes) - Mirror of current diffulty ($0268).
+
+$0418 (2 bytes) - Level width in pixels.
+$041A (2 bytes) - Level height in pixels.
+
+$0422 (2 bytes) - Camera x position.
+$0424 (2 bytes) - Camera y position.
+
+$042A (2 bytes) - Camera x speed.
+$042C (2 bytes) - Camera y speed.
+
+$044A (2 bytes) - Mirror of camera x position.
+$044C (2 bytes) - Mirror of camera y position.
+
+$04AD (2 bytes) - BG1 x position.
+$04AF (2 bytes) - BG1 y position.
+$04B1 (2 bytes) - BG2 x position.
+$04B3 (2 bytes) - BG2 y position.
+$04B5 (2 bytes) - BG3 x position.
+$04B7 (2 bytes) - BG3 y position?
+
+$0484 (2 bytes) - Frame counter.
+
+$0486 (1 bytes) - Not lagging flag. It's set to 01 at $82DA7C (start of wait loop) if frame didn't lag.
+
+$0499 (? bytes) - Dark filter, for transitions and pausing. #$00 = completely dark, #$0F = completely clear.
+
+$049F (1 bytes) - Mosaic effect size.
+
+$04C1 (1 bytes) - Flags for each layer the transparency effects will multiply with.
+
+$04C3 (1 bytes) - Colour of transparency effect of certain events, like beating the level:
+  #$00~#$1F = completely transparent;
+  #$20~#$3F = scale of red;
+  #$40~#$5F = scale of green;
+  #$60~#$7F = scale of yellow;
+  #$80~#$9F = scale of blue;
+  #$A0~#$BF = scale of magenta;
+  #$C0~#$DF = scale of cyan;
+  #$E0~#$FF = scale of white.
+
+
+$06C9 (62 bytes) - Start of Santa's addresses (according to tracelog).
+
+$06D1 (3 bytes) - Santa's status/action pointer, this is set by $0701, see description of each pointer there.
+
+$06D4 (1 bytes) - Apparently spillage of $06D1 3rd byte.
+
+$06D8 (1 bytes) - Santa's flags? Format: d??? ??s?
+  s = on screen?
+  d = direction (left)
+
+$06D9 (1 bytes) - Santa's flags 2? Format: ???? ??dr
+  d = is dying
+  r = forced to face right (during the "Over" levels)
+
+$06E1 (2 bytes) - X subspeed.
+$06E3 (2 bytes) - X speed.
+$06E5 (2 bytes) - Y subspeed.
+$06E7 (2 bytes) - Y speed.
+
+$06E9 (2 bytes) - X subposition.
+$06EB (2 bytes) - X position.
+$06ED (2 bytes) - Y subposition.
+$06EF (2 bytes) - Y position.
+
+$06F1 (2 bytes) - Mirror of x position?
+$06F3 (2 bytes) - Mirror of y position?
+
+$06F7 (2 bytes) - Jump force, when you jump it starts at 6 and decrement every frame, every frame you hold jump during this you are increasing the jump power.
+
+$06F9 (1 bytes) - Santa hats (HP).
+
+$06FA (1 bytes) - Invincibility timer. Note: does not update when Santa is offscreen.
+
+$0701 (2 bytes) - Santa's status/action id, it's used as index to get the pointer $06D1 in table $8292D1~$829336 ($0112D1~$011336 in CARTROM), so it will always be a multiple of 3.
+  #$00 ($87CE04) = running too?
+  #$03 ($87CE04) = running
+  #$06 ($87C02B) = jumping
+  #$09 ($87C02B) = jumping too?
+  #$0C ($87C02B) = jumping too?
+  #$0F ($878418) = climbing
+  #$12 ($86D9C2) = shooting magic
+  #$15 ($8796C3) = crouching
+  #$18 ($87C02B) = jumping too?
+  #$1B ($87DB28) = falling
+  #$1E ($87DB28) = falling/standing still too?
+  #$21 ($87E6EC) = sliding candy cane
+  #$24 ($87A7CE) = swinging
+  #$27 ($878808) = climbing chimney
+  #$2A ($87B428) = ground pounding
+  #$2D ($87DB28) = standing still
+  #$30 ($86E44F) = dying
+  #$33* ($87C513) = Evil Santa running too? ($00)
+  #$36* ($87C513) = Evil Santa running ($03)
+  #$39* ($87B58A) = Evil Santa jumping ($06)
+  #$3C* ($87B58A) = Evil Santa jumping too? ($09)
+  #$3F* ($87B58A) = Evil Santa jumping too? ($0C)
+  #$42* ($878000) = Evil Santa climbing ($0F)
+  #$45* ($87C513) = Evil Santa running too? ($12)
+  #$48* ($879179) = Evil Santa crouching ($15)
+  #$4B* ($87B58A) = Evil Santa jumping too? ($18)
+  #$4E* ($87D73D) = Evil Santa falling ($1B)
+  #$51* ($86D103) = Evil Santa attacking ($1E)
+  #$54* ($87DEF3) = Evil Santa sliding candy cane ($21)
+  #$57* ($879D0A) = Evil Santa swinging ($24)
+  #$5A* ($878808) = Evil Santa climbing chimney? ($27)
+  #$5D* ($87B2CE) = Evil Santa ground pounding ($2A)
+  #$60* ($87D73D) = Evil Santa standing still too ($2D)
+  #$63* ($86E44F) = Evil Santa dying? ($30)
+
+
+$0707 - Start of sprite addresses, apparently. Each sprite slot takes 0x3E (62) bytes of space. -- TODO: figure out which sprite comes out of the red and golden gifts
+  +00: $0707 (2 bytes) - Sprite 
+  +02: $0709 (2 bytes) - Sprite 
+  +04: $070B (2 bytes) - Sprite 
+  +06: $070D (2 bytes) - Sprite 
+  +08: $070F (2 bytes) - Sprite type/pointer (check "DAZE.sprites" in the bottom)
+  +0A: $0711 (2 bytes) - Sprite type/pointer bank (high byte is spillage apparently)
+  +0C: $0713 (2 bytes) - Sprite 
+  +0E: $0715 (2 bytes) - Sprite flags apparently:
+    byte 1: ???? ????
+    byte 2: d??? ??s?
+      s = on screen?
+      d = direction (left)
+  +10: $0717 (2 bytes) - Sprite 
+  +12: $0719 (2 bytes) - Sprite 
+  +14: $071B (2 bytes) - Sprite 
+  +16: $071D (2 bytes) - Sprite animation frame.
+  +18: $071F (2 bytes) - Sprite x subspeed.
+  +1A: $0721 (2 bytes) - Sprite x speed.
+  +1C: $0723 (2 bytes) - Sprite y subspeed.
+  +1E: $0725 (2 bytes) - Sprite y speed.
+  +20: $0727 (2 bytes) - Sprite x subsposition.
+  +22: $0729 (2 bytes) - Sprite x position.
+  +24: $072B (2 bytes) - Sprite y subsposition.
+  +26: $072D (2 bytes) - Sprite y position.
+  +28: $072F (2 bytes) - Sprite 
+  +2A: $0731 (2 bytes) - Sprite 
+  +2C: $0733 (2 bytes) - Sprite 
+  +2E: $0735 (2 bytes) - Sprite invincibility timer.
+  +30: $0737 (2 bytes) - Sprite HP and damage flashing timer.
+  +32: $0739 (2 bytes) - Sprite 
+  +34: $073B (2 bytes) - Sprite 
+  +36: $073D (2 bytes) - Sprite 
+  +38: $073F (2 bytes) - Sprite 
+  +3A: $0741 (2 bytes) - Sprite 
+  +3C: $0743 (2 bytes) - Sprite 
+
+$0707 (62 bytes) - Sprite <00> addresses.
+$0745 (62 bytes) - Sprite <01> addresses.
+$0783 (62 bytes) - Sprite <02> addresses.
+$07C1 (62 bytes) - Sprite <03> addresses.
+$07FF (62 bytes) - Sprite <04> addresses.
+$083D (62 bytes) - Sprite <05> addresses.
+$087B (62 bytes) - Sprite <06> addresses.
+$08B9 (62 bytes) - Sprite <07> addresses.
+$08F7 (62 bytes) - Sprite <08> addresses.
+$0935 (62 bytes) - Sprite <09> addresses.
+$0973 (62 bytes) - Sprite <10> addresses.
+$09B1 (62 bytes) - Sprite <11> addresses.
+$09EF (62 bytes) - Sprite <12> addresses.
+$0A2D (62 bytes) - Sprite <13> addresses.
+$0A6B (62 bytes) - Sprite <14> addresses.
+$0AA9 (62 bytes) - Sprite <15> addresses.
+$0AE7 (62 bytes) - Sprite <16> addresses.
+$0B25 (62 bytes) - Sprite <17> addresses.
+$0B63 (62 bytes) - Sprite <18> addresses.
+$0BA1 (62 bytes) - Sprite <19> addresses.
+$0BDF (62 bytes) - Sprite <20> addresses.
+$0C1D (62 bytes) - Sprite <21> addresses.
+$0C5B (62 bytes) - Sprite <22> addresses.
+$0C99 (62 bytes) - Sprite <23> addresses.
+$0CD7 (62 bytes) - Sprite <24> addresses.
+$0D15 (62 bytes) - Sprite <25> addresses.
+$0D53 (62 bytes) - Sprite <26> addresses.
+$0D91 (62 bytes) - Sprite <27> addresses.
+$0DCF (62 bytes) - Sprite <28> addresses.
+$0E0D (62 bytes) - Sprite <29> addresses.
+$0E4B (62 bytes) - Sprite <30> addresses.
+$0E89 (62 bytes) - Sprite <31> addresses.
+$0EC7 (62 bytes) - Sprite <32> addresses.
+$0F05 (62 bytes) - Sprite <33> addresses.
+$0F43 (62 bytes) - Sprite <34> addresses.
+$0F81 (62 bytes) - Sprite <35> addresses.
+$0FBF (62 bytes) - Sprite <36> addresses.
+$0FFD (62 bytes) - Sprite <37> addresses.
+$103B (62 bytes) - Sprite <38> addresses.
+$1079 (62 bytes) - Sprite <39> addresses.
+$10B7 (62 bytes) - Sprite <40> addresses.
+$10F5 (62 bytes) - Sprite <41> addresses.
+$1133 (62 bytes) - Sprite <42> addresses.
+$1171 (62 bytes) - Sprite <43> addresses.
+$11AF (62 bytes) - Sprite <44> addresses.
+$11ED (62 bytes) - Sprite <45> addresses.
+$122B (62 bytes) - Sprite <46> addresses.
+$1269 (62 bytes) - Sprite <47> addresses.
+$12A7 (62 bytes) - Sprite <48> addresses.
+$12E5 (62 bytes) - Sprite <49> addresses.
+$1323 (62 bytes) - Sprite <50> addresses.
+$1361 (62 bytes) - Sprite <51> addresses.
+$139F (62 bytes) - Sprite <52> addresses.
+$13DD (62 bytes) - Sprite <53> addresses.
+$141B (62 bytes) - Sprite <54> addresses.
+$1459 (62 bytes) - Sprite <55> addresses.
+$1497 (62 bytes) - Sprite <56> addresses.
+$14D5 (62 bytes) - Sprite <57> addresses.
+$1513 (62 bytes) - Sprite <58> addresses.
+$1551 (62 bytes) - Sprite <59> addresses.
+$158F (62 bytes) - Sprite <60> addresses.
+$15CD (62 bytes) - Sprite <61> addresses.
+$160B (62 bytes) - Sprite <62> addresses.
+$1649 (62 bytes) - Sprite <63> addresses.
+
+$1B67 (2 bytes) - Tile "group" 1 animation frame.
+
+$1B72 (2 bytes) - Tile "group" 2 animation frame.
+
+$1B7D (2 bytes) - Tile "group" 3 animation frame.
+
+$1B89 (2 bytes) - Tile "group" 4 animation frame.
+
+$1B93 (2 bytes) - Tile "group" 5 animation frame.
+
+$1C11 (2 bytes) - Delta x between Santa and the sprites in the screen. Need `event.onmemoryexecute( , 0x81bdf1)` in order to get all sprites, it changes midframe.
+$1C13 (2 bytes) - Delta y between Santa and the sprites in the screen. Need `event.onmemoryexecute( , 0x81bdf1)` in order to get all sprites, it changes midframe.
+
+$1C15 (1 bytes) - Flag for shooting magic.
+
+$1C17 (2 bytes) - Flag for Fire Magic.
+
+$1C19 (1 bytes) - Flag for Evil Santa mode.
+
+$1D3C (2 bytes) - Timer until camera starts moving vertically when holding down or up.
+
+$1D44 (2 bytes) - Evil Santa mode timer.
+
+$1D57 (2 bytes) - Mirror of Santa's x position ($06EB).
+
+$1D5B (2 bytes) - Mirror of Santa's y position ($06EF).
+
+$1D5D (2 bytes) - Distance between Santa's y position and the screen center, when screen is locked on Santa's position.
+
+$1D5F (2 bytes) - Extra distance for $1D5D when camera is moving vertically holding down or up.
+
+$1DE2 (1 bytes) - Water flood threshold counter, when it overflows the water rises 1 pixel.
+
+$1DE4 (1 bytes) - Water flood threshold delta, it's how fast $1DE2 increases.
+
+$1DE7 (2 bytes) - Water flood y position.
+
+$1EC8 (? bytes) - Frame counter for pressing start to unpause, when it reaches 4 it will unpause.
+
+$1E5A (2 bytes) - Sants hats that the player will respawn with (it's set based on the difficulty).
+$1E5C (2 bytes) - Lives that the plauer will respawn with?
+
+$1E5E (2 bytes) - Gift boxes (counts only blue).
+
+$1E60 (2 bytes) - Blue gift boxes (for the level end score).
+$1E62 (2 bytes) - Red gift boxes (for the level end score).
+$1E64 (2 bytes) - Golden gift boxes (for the level end score).
+
+$1E66 (2 bytes) - Santa hats (display only, kinda mirror of $06F9).
+
+$1E68 (2 bytes) - Lives.
+
+$1E6A (4 bytes) - Score.
+
+$1E6E (2 bytes) - Level ID: [(width x height) in pixels, width visible in game is -0x40 of these values]
+  #$00 - Santa's Hallway (0C00 x 0240); $80DDBD ($005DBD)
+  #$01 - Let It Snow (0980 x 0200); $80C551 ($004551)
+  #$02 - Ice Cave (09C0 x 0780)
+  #$03 - Blue Magic (2280 x 0280)
+  #$04 - The Evil Snowman (1400 x 0200)
+  #$05 - 
+  #$06 - 
+  #$07 - 
+  #$08 - 
+  #$09 - 
+  #$0A - 
+  #$0B - 
+  #$0C - 
+  #$0D - 
+  #$0E - 
+  #$0F - 
+  #$10 - 
+  #$11 - 
+  #$12 - 
+  #$13 - 
+  #$14 - 
+  #$15 - 
+  #$16 - 
+  #$17 - 
+  #$18 - 
+
+$1E70 (2 bytes) - Sublevel ID. Used in level $10 (The Attic).
+
+$1EB4 (2 bytes) - Inversed frame counter inside the level.
+
+$1EBC (2 bytes) - Timer for "GET READY" display
+
+$1E74 (2 bytes) - Respawn x position.
+$1E76 (2 bytes) - Respawn y position.
+
+$1F26 (2 bytes) - Some score screen timer.
+
+$1F2E (2 bytes) - Flag for player pressing button to end score screen.
+
+$8600 (512 bytes) - OAM/Sprite layer tiles, each tile is 8x8 and takes 4 bytes (x pos, y pos, tile ID, properties).
+
+$8800 (? bytes) - 
+
+$8C20 (? bytes) - 
+
+$986A (? bytes) - Something related to layer 1 tiles, maybe it's tile properties, apparently an entry is global for every same tile in the current level. One word per entry, and apparently if bit 14 is set it's solid. The read is done at $81D0EA (LDA  $7e986a,x), and the check of solidity (?) is done at $819BDD (bit  #$4000; bne  $9bf6).
+
+$A66A (? bytes) - Layer 3 tiles, each tile is 8x8 and takes 2 bytes.
+
+
+$10000 (? bytes) - Layer 1 metatiles structures apparently, each metatile being 64x64 (16 16x16 tiles).
+  $10000: 4 words: 4 1st row tiles in metatile 00
+  $10008: 4 words: 4 1st row tiles in metatile 01
+  $10010: 4 words: 4 1st row tiles in metatile 02
+  $10018: 4 words: 4 1st row tiles in metatile 03
+  $10020: 4 words: 4 1st row tiles in metatile 04
+  $10028: 4 words: 4 1st row tiles in metatile 05
+  $10030: 4 words: 4 1st row tiles in metatile 06
+  $10038: 4 words: 4 1st row tiles in metatile 07
+  $10040: 4 words: 4 1st row tiles in metatile 08
+  $10048: 4 words: 4 1st row tiles in metatile 09
+  $10050: 4 words: 4 1st row tiles in metatile 0A
+  $10058: 4 words: 4 1st row tiles in metatile 0B
+  $10060: 4 words: 4 1st row tiles in metatile 0C
+  $10068: 4 words: 4 1st row tiles in metatile 0D
+  $10070: 4 words: 4 1st row tiles in metatile 0E
+  $10078: 4 words: 4 1st row tiles in metatile 0F
+  ...(and some empty gap of 22 bytes in $10080)
+  $10096: 4 words: 4 2nd row tiles in metatile 00
+  $1009E: 4 words: 4 2nd row tiles in metatile 01
+  ...(and some empty gap of 22 bytes in $10116)
+  $1012C: 4 words: 4 3rd row tiles in metatile 00
+  $10136: 4 words: 4 3rd row tiles in metatile 01
+  ...(and some empty gap of 22 bytes in $101AC)
+  $101C2: 4 words: 4 4th row tiles in metatile 00
+  $101CA: 4 words: 4 4th row tiles in metatile 01
+  ...
+  $10258: 4 words: 4 1st row tiles in metatile 10?
+
+$15000 (? bytes) - Layer 1 metatilemap, 1 word per metatile, the order is horizontal thru the level then vertical (zigzag). The amount of bytes varies per level, since it depends on level size. 
+
+$16800 (? bytes) - Layer 2 metatiles? Each 2 bytes is for a single 64x64 metatile (16 16x16 tile).
+
+$18000 (? bytes) - 
+
+
+
+
+
+
+
+
+
+#################################################################
+
+$070F (2 bytes) - Sprite type/pointer:
+
+DAZE.sprites = {
+  [0x000000] = {name = "SPECIAL COMMANDS"},
+  [0x848034] = {name =  "???"}, -- appears in Santa's House, in the upper part
+  [0x8480C2] = {name =  "Rolling barrel"},
+  [0x84854D] = {name =  "Mouse (walking)"},
+  [0x848AD4] = {name =  "Mouse (attacking)"},
+  [0x848E0B] = {name =  "Toothy beast"},
+  [0x849637] = {name =  "Car toy"},
+  [0x849A80] = {name =  "Cloud platform"},
+  [0x849DF7] = {name =  "Elf"},
+  [0x84A326] = {name =  "Electric mouse"},
+  [0x84AA55] = {name =  "Steel elevator"},
+  [0x84AB39] = {name =  "Fireplace"},
+  [0x84B504] = {name =  "Ghost mouse"},
+  [0x84B6EC] = {name =  "Punching hatstand"},
+  [0x84BF90] = {name =  "Floating heart platform"},
+  [0x84C13E] = {name =  "Jumping box"},
+  [0x84CC5B] = {name =  "Jack-in-a-Box"},
+  [0x84D578] = {name =  "Jumping rock"},
+  [0x84DE23] = {name =  "Owl"},
+  [0x84E0D1] = {name =  "Penguin (walking)"},
+  [0x84E5E0] = {name =  "Penguin (attacking)"},
+  [0x84E88B] = {name =  "Airplane toy"},
+  [0x84EDC2] = {name =  "Red gift (with Extra Santa hat?)"},
+  [0x84F391] = {name =  "Blue gift"},
+  [0x84F960] = {name =  "Clock pendulum"},
+  [0x84F9DC] = {name =  "Floating woodden platform"},
+  [0x858000] = {name =  "Retracting woodden platform"},
+  [0x8581FF] = {name =  "Ice platform"},
+  [0x858445] = {name =  "Swimming mouse (looking to the sides)"},
+  [0x85867D] = {name =  "Swimming mouse (walking)"},
+  [0x858B36] = {name =  "Swimming mouse (looking to the sides slow)"},
+  [0x858E21] = {name =  "Gift box thrown"},
+  [0x85916C] = {name =  "Reindeer"},
+  [0x8594FC] = {name =  "Checkpoint bell"},
+  [0x859794] = {name =  "Mechanic mouse (running)"},
+  [0x859C93] = {name =  "Mechanic mouse (standing)"},
+  [0x859D4F] = {name =  "Jumping fish"},
+  [0x85A4C6] = {name =  "Chimney smoke"},
+  [0x85A7AD] = {name =  "Snowman"},
+  [0x85AD11] = {name =  "Snowman's head"},
+  [0x85AD8B] = {name =  "Spider"},
+  [0x85B494] = {name =  "Evil Snowman's snowball"},
+  [0x85B712] = {name =  "Penguin's snowball"},
+  [0x85B74E] = {name =  "Tank toy (standing)"},
+  [0x85C15C] = {name =  "Tank toy (moving)"},
+  [0x85C6CD] = {name =  "Tank toy (shooting)"},
+  [0x85CC36] = {name =  "Tank toy's bullet"},
+  [0x85D2AC] = {name =  "Star"},
+  [0x85D6E7] = {name =  "Ice stalactite"},
+  [0x85D743] = {name =  "Kicking foot"},
+  [0x85DAE5] = {name =  "Armchair"},
+  [0x85E91F] = {name =  "Cup of coffee"},
+  [0x868000] = {name =  "Reindeer pulling Santa's sleigh"},
+  [0x8683AF] = {name =  "Santa in sleigh (normal)"},
+  [0x8684D0] = {name =  "Santa in sleigh (throwing gift)"},
+  [0x868794] = {name =  "Kite"},
+  [0x868CD7] = {name =  "Football"},
+  [0x86A53E] = {name =  "British hot air balloon"},
+  [0x86A813] = {name =  "Mouse in rocket"},
+  [0x86B045] = {name =  "Mouse with backpack helicopter"},
+  [0x86B34B] = {name =  "Satellite"},
+  [0x86BAA4] = {name =  "The Timekeeper's gear"},
+  [0x86BB9C] = {name =  "Floating basket"},
+  [0x86BCB0] = {name =  "Chain hook"},
+  [0x86BDE4] = {name =  "Puff of smoke"},
+  [0x86BFEE] = {name =  "Machine eyes"},
+  [0x86C01C] = {name =  "Knitting ball"},
+  [0x86CD73] = {name =  "Rollerblade"},
+  [0x86CF18] = {name =  "Worm"},
+  [0x86DE42] = {name =  "Transformation smoke"},
+  [0x86E555] = {name =  "Fire magic"},
+  [0x86E981] = {name =  "Magic"},
+  [0x888000] = {name =  "Mr. Weather (normal)", show_hp = true}, -- #4 boss
+  [0x8881D1] = {name =  "Mr. Weather (getting damage)", show_hp = true},
+  [0x888386] = {name =  "Mr. Weather (dying)", show_hp = true},
+  [0x888784] = {name =  "Mr. Weather's lightning bolt"},
+  [0x888889] = {name =  "Mr. Weather's flash"},
+  [0x8888FE] = {name =  "Cloud barrier flash"},
+  [0x888E8E] = {name =  "Cloud barrier"},
+  [0x888FF3] = {name =  "The Timekeeper (normal)", show_hp = true}, -- #2 boss
+  [0x8896D6] = {name =  "The Timekeeper (exploding)", show_hp = true},
+  [0x889A21] = {name =  "Evil Snowman (standing)", show_hp = true}, -- #1 boss
+  [0x889A5D] = {name =  "Evil Snowman (attacking)", show_hp = true},
+  [0x88A346] = {name =  "Louse The Mouse (attacking)", show_hp = true},
+  [0x88B305] = {name =  "Louse The Mouse (squashed)", show_hp = true},
+  [0x88BEC4] = {name =  "Louse The Mouse (standing)", show_hp = true}, -- #3 boss
+  [0x88CBB3] = {name =  "Louse The Mouse (walking)", show_hp = true},
+  [0x88DABA] = {name =  "Lever"},
+  [0x88DB6B] = {name =  "Crane"},
+  [0x88DC46] = {name =  "10ton weight ball"},
+  [0x898000] = {name =  "Bomb"},
+  [0x898874] = {name =  "Fire magic box"},
+  [0x898961] = {name =  "Ice wall"},
+  [0x898B26] = {name =  "Magic carpet"},
+  [0x899063] = {name =  "Extra Santa hat"},
+  [0x899224] = {name =  "Extra life"},
+  [0x8993E6] = {name =  "Golden gift"},
+  [0x899C45] = {name =  "Polar bear's sleeping 'Z's"},
+  [0x899CE8] = {name =  "Punch contraption"},
+  [0x89A102] = {name =  "Helicopter toy"},
+  [0x89A501] = {name =  "Trapdoor"},
+  [0x89A6DC] = {name =  "Chimney door"},
+}

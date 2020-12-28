@@ -1,0 +1,1191 @@
+Source: https://gamefaqs.gamespot.com/genesis/578655-daze-before-christmas/faqs/55255
+ ________                         __________        _____                     
+ \______ \ _____  ________ ____   \______   \ _____/ ____\___________   ____  
+  |    |  \\__  \ \___   // __ \   |    |  _// __ \   __\/  _ \_  __ \_/ __ \
+  |    `   \/ __ \_/    /\  ___/   |    |   \  ___/|  | (  <_> )  | \/\  ___/
+ /_______  (____  /_____ \\___  >  |______  /\___  >__|  \____/|__|    \___  >
+         \/     \/      \/    \/          \/     \/                        \/ 
+        _________ .__          .__          __                         
+        \_   ___ \|  |_________|__| _______/  |_  _____ _____    ______
+        /    \  \/|  |  \_  __ \  |/  ___/\   __\/     \\__  \  /  ___/
+        \     \___|   Y  \  | \/  |\___ \  |  | |  Y Y  \/ __ \_\___ \
+         \______  /___|  /__|  |__/____  > |__| |__|_|  (____  /____  >
+                \/     \/              \/             \/     \/     \/
+
+
+.-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=.
+|                                                                            |
+|                           AUTHOR: TrulyDexterous                           |
+|                                VERSION: 1.0                                |
+|                           LAST UPDATE: 29/12/08                            |
+|                           PLATFORM: Genesis/SNES                           |
+|                                                                            |
+'=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           T a b l e  o f  C o n t e n t s           |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+                         1).......Revision History
+                         2)...........Legal Notice
+                         3)...........Introduction
+                         4)............Game Basics
+
+                         5)............Walkthrough
+                         5a).......Santa's Hallway
+                         5b)...........Let It Snow
+                         5c)..............Ice Cave
+                         5d)............Blue Magic
+                         5e)......The Evil Snowman
+                         5f)..........Over England
+                         5g)......Before The Flood
+                         5h)..........Wood Factory
+                         5i)............Magic Cave
+                         5j).........Steel Factory
+                         5k)........The Timekeeper
+                         5l)...........Over Russia
+                         5m).........Winter Waters
+                         5n).......Steel Elevators
+                         5o)....Gift Wrapping Dept
+                         5p).........Magic Bubbles
+                         5q).......Louse The Mouse
+                         5r)............Over Japan
+                         5s)............North Pole
+                         5t).......Creepy Basement
+                         5u).........Santa's House
+                         5v)..........Over The USA
+                         5w)...........Mr. Weather
+
+                         6)........Level Passwords
+                         7)................Credits
+                         8)....Contact Information
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |        1)  R e v i s i o n  H i s t o r y           |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+  V e r s i o n  1 . 0 ( 29 / 12 / 08)
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+The guide is complete! File size is around 61kb.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |            2)  L e g a l  N o t i c e               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+This guide can only be viewed on the following sites-
+
+GameFAQs    - http://www.gamefaqs.com
+GameSpot    - http://www.gamespot.com
+IGN         - http://www.ign.com
+NEOSEEKER   - http://www.neoseeker.com
+SUPERCHEATS - http://www.supercheats.com
+
+These are the only sites that I trust and that keep my guide updated. For
+this reason I won't allow my guides on other sites. Please don't email to
+ask. 
+
+UNDER NO CIRCUMSTANCES CAN CHEATCC.COM USE THIS DOCUMENT.
+
+This guide is the and everything included herein is the sole property of 
+D Makey. It may not be used for profitable purposes (whether money is
+involved or not) or for promotional purposes. It may not be used for any
+reason other than to provide help on a free to view website. Printing of
+this document is allowed, but only for personal use. It may not be displayed
+or offered publicly.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |            3)  I n t r o d u c t i o n              |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Hello and welcome to my FAQ for Daze Before Christmas. This is a game a lot 
+of people won't have heard of, as it wasn't released in the US. However, if
+you found your way here, I suppose you need some help!
+
+I'm writing this because there isn't a guide up (at least there isn't for the
+Genesis) and I've got nothing else to do. That, and the fact I didn't realise
+there was a SNES guide already up before I started writing. Otherwise I
+probably wouldn't have bothered. Anyway, I have bothered, so get reading!
+
+If you want to see any more of my work, go here- 
+
+http://www.gamefaqs.com/features/recognition/76852.html
+
+Okay, I hope you find the guide useful!
+
+- TrulyDexterous
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              4)  G a m e  B a s i c s               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+  G e n e s i s  C o n t r o l s
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Left............................Move Left
+  Right..........................Move Right
+  Down.......................Crouch/Descend
+  Up.................................Ascend
+  B....................................Jump
+  A..................................Attack
+  C..................................Attack
+
+These controls can be modified in the options menu.
+
+  S N E S  C o n t r o l s
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Left............................Move Left
+  Right..........................Move Right
+  Down.......................Crouch/Descend
+  Up.................................Ascend
+  B....................................Jump
+  Y..................................Attack
+
+
+  I t e m s
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+      BELL      The Bell acts as a checkpoint. Ring this and you will return
+     ¯¯¯¯¯¯      to this point if you die.
+
+      BOMB      These are found inside Presents. I'm pretty sure you know how
+     ¯¯¯¯¯¯     this goes, so stay away from them.
+
+     COFFEE     This turns Santa into Anti-Claus. Whilst he is Anti-Claus, 
+    ¯¯¯¯¯¯¯¯    Santa cannot be harmed by enemies. He won't be able to use
+                magic attacks or open presents. He will attack by hitting
+                enemies with his sack. The Coffee power-up will last for
+                30 seconds before wearing off. This can be shortened to 10
+                or 20 seconds in the options menu.
+ 
+   EXIT STAR    This is a golden star. Find this to finish the level.
+  ¯¯¯¯¯¯¯¯¯¯¯
+   EXTRA LIFE   This takes the form of Santa's face. Grab this for another
+  ¯¯¯¯¯¯¯¯¯¯¯¯  turn.
+
+ FIRE POWER-UP  This will change Santa's magic attack from ice to fire. This
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ is sometimes required to melt walls of ice or to defeat 
+                certain enemies.
+
+      HAT       This will add to Santa's health. However, if the health bar
+     ¯¯¯¯¯      is maxed, this won't have any effect.
+
+    PRESENTS    Presents are found scattered throughout levels and come in
+   ¯¯¯¯¯¯¯¯¯¯   a few different colours. Red and golden presents contain
+                either Bombs, Extra Lives, Hats or enemies. Blue Presents
+                are given up by defeated enemies. Collect these to use in
+                mini-games.
+
+
+  B a s i c  G a m e p l a y
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+• Whilst some platforms are permanent, others are temporary. Clouds will
+  disappear if you stand on them too long and wooden platforms will slide
+  back into the wall. Make sure you don't get caught out.
+
+• You may think it a good idea to avoid enemies, but it isn't. Defeating 
+  enemies will give you Blue Presents, which you need to take part in the
+  mini-games. Killing more enemies means more Presents.
+
+• Most levels require you to find the Exit Star, but in some, you need to
+  drop off of the end of the cliff or leave to screen to the right.
+
+• In some Presents, you will find Santa's Elves. Though I know you are
+  freeing them, I have no idea what purpose them serve. If anyone can clear
+  this up, drop me an email.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              5)  W a l k t h r o u g h              |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Welcome to the walkthrough section. I think it is pretty easy to follow and
+doesn't really require much explanation, so just get to the section you want
+and read it. I have written the guide on medium difficulty. I think this
+should cover most people's needs. Easy is too easy and hard isn't that much
+harder than normal mode.
+
+Something that you may notice is the amount of detail in some levels more
+than others. In the earlier levels, I began writing a step-by-step guide
+through a level. As I wrote more, I realised this wasn't really necessary.
+The later levels will take you through step-by-step, but I won't be telling
+you to kill every single enemy and the like.
+
+This guide isn't concerned with high scores. It is concerned with getting
+you  to the end of the game.
+
+Thanks and enjoy!
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |          5a)  S a n t a ' s  H a l l w a y          |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Head to the right and open the red Present. Inside is an Elf. Carry on down
+the stairs and drop off of the end of the platform. Walk to the left and you
+will see a golden Present. Open it up and you will find a Hat. 
+
+Go back to the right and climb the stairs. At the top 
+head to the right and
+take out the Rat. Continue on, ignoring the candycane for now. Over here you
+will find a red Present with a Bomb in it. Avoid the Bomb and open the golden
+Present nearby. Inside is an Elf.
+
+Walk back to the left and climb the candycane. At the top, jump to the right
+and move along the platform. At the end, jump onto the platform on the right.
+On this platform is a present. Inside is a Rat. Leap onto the candycane and
+from here you can reach a platform on the right.
+
+On this platform is a cup of Coffee. Collect it and Santa will turn into
+Anti-Clause. Go to the right and you will bump into a Block Monster. Jump
+at him and whack him 3 times with your sack. Once it has been defeated, an
+Elf will be released.
+
+Behind the Block Monster is a present with a Hat inside. Walk up the stairs
+and at the top you will find another Hat. Head back over to the left, ignore
+the Coffee and jump on the candycane. Slide down the pole and at the bottom
+use the armchair to reach the Bell on the left.
+
+Drop back to the ground and head over to the left. Over here you will meet a
+couple of Rats. Take them out. When you reach another armchair, use it to
+spring up and reach the Extra Life up here.
+
+Press on to the left and you will find a Hat, which is next to a red Present.
+Don't bother opening it as there is only a Bomb inside. Now, head back over
+to the right. Don't open the first Present that you reach, as this is a Bomb
+too. In the second Present has a Hat in it. Just to the right is an armchair.
+Use this to reach the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              5b)  L e t  I t  S n o w               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Go to the right and take out the Penguin. Just past this is a present with an
+Elf inside. Carry on and kill the Snowman. Well, melt him at least. After
+this there is a Present. Open it, there is a Jack-in-a-Box inside. Nearby,
+there is another Penguin to deal with.
+
+Ignore the next Present, it will reveal a Bomb. Head up the hill and take out
+the Penguin and the Snowman that you will come across. As you start to come
+down the hill, there is another Present. Inside is an Elf. Drop off of the
+end of the cliff the end the level.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |                 5c)  I c e  C a v e                 |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+From the platform on which you start, jump to the next one on the right. Just
+to the right you will see a White Bird. You probably won't be able to hit it
+with Santa's magic, so try jumping on its head.
+
+Go to the right and take out the next White Bird. Close to this there is a
+Fire Power-Up. Grab this and Santa will now have fire magic instead of ice.
+Just to the right of this there is a thin wall of ice. Melt this and walk
+into the reindeer here. You need to find two of these in this level.
+
+Head back over to the left. Jump onto the lower platform and from here you
+can reach the larger platform on the left. Go along here and take out the
+Penguin and the White Bird. At the end you will find a Hat inside a Present.
+Now jump onto the cloud just to the left.
+
+From here you can reach a higher platform on the left. Jump along the clouds
+below this and you will reach solid ground. A Present containing a Hat will
+be here. Just to the left is the second reindeer, behind a wall of ice. If
+you died and lost the Fire Power-Up, you will have to go back and find it, so
+that you can melt the ice.
+
+Head back over to the right, over the clouds and platforms until you reach
+a place where there are two small platforms in front of you, one below and
+one above. Get onto the lower platform and drop onto the cloud below this.
+Wait for the cloud to disappear and drop onto another cloud. From here you
+can reach the ground.
+
+Down here, take out the nearby enemies. There is a red Present here. There is
+a Penguin inside. Just to the left is a cup of Coffee. There is really no
+point in using it, so head to the right. Use the cloud to get onto the higher
+ledge. Up here there is a red Present. Ignore it, there's only a Bomb inside.
+
+At the edge of this ledge, follow the platforms and clouds downwards. Watch
+out for the spikes below the last cloud. Inside the nearby Present you will
+find a Bell. Carry on to the left and let the clouds disappear. You will land
+next to some spikes. Jump onto the cloud far over to the left. Jump to the
+next cloud and finally back to solid ground.
+
+Just to the left is a red Present with an Elf inside. Use the small platform
+to get to the higher ground. Take out the Penguins up here, then drop down to
+the left. In a golden Present here there is an Elf. Fall onto the cloud to
+the left, then drop to the solid ground.
+
+Take a long jump over the large spike pit here. Watch out for the Penguin
+when you land. Also on this platform is a Present, containing a Hat. At the
+end of this platform, follow the step of clouds downwards. On a small ledge
+in the side of the cliff is a Present. In here is a Bell.
+
+Drop onto the clouds below. Underneath these is a Penguin. Jump on his head
+and land on the ledge. Jump onto the cloud over the spike pit, then onto the
+platform on the right. The Present on this platform has a Penguin in it.
+Take a giant leap over the next spike pit and deal with the White Bird on
+the other side.
+
+Head to the right and jump over the small patch of spikes. Behind these is a
+Penguin. Take him out and press on to the right. There are a few more Penguins
+to contend with over here. Inside the red Present is an Elf.
+
+As you approach the end of this platform, you will see three icicles over
+head. As you move beneath one, it will loosen and fall to earth. Make sure
+you move back out of the way.
+
+Once you have moved past the icicles, take a running jump over the next spike
+pit. Now, use the small platform to get on top of the cliff here. At the top,
+walk to the right and you will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |               5d)  B l u e  M a g i c               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+To the right is a Helicopter hovering over the next platform. Jump up and
+shoot magic at it. Once it is knocked out, jump onto that platform. Follow
+the platforms along taking out another Helicopter along the way.
+
+Once you reach a larger platform, take out the Jack-in-a-Box here. Carry on
+to the right and deal with another Helicopter. Now, head back to the left
+and drop off of then end of the cliff. To the left there is another Helicopter
+as well as a red Present. Inside the Present is an Elf.
+
+Now, head over to the right and take out the Jack-in-a-Box. Get on the
+conveyor belt and go through the present wrapping machine. On the other side,
+Santa will break out of the present. Take out the nearby Helicopter then jump
+down to the platform on the right.
+
+Destroy the Jack-in-a-Box here. Head to the right and jump onto the next
+conveyor. Go through the present wrapper (or jump over it) and knock out the
+Helicopter on the other side.
+
+Jump onto the next platform. On here is another Jack-in-a-Box. Behind this is
+a Hat. Grab it and drop to the lower floor. Down here is a Jack. Take him out
+then jump onto the higher ground. Take out the next Jack up here, then jump
+onto the next platform.
+
+On here there is a golden Present. This contains a Bell. At the end of this
+platform is a flying carpet. Stand on this and it will take you over a long
+gap and drop you off at the next platform.
+
+There is a red Present with a Hat inside here. Jump onto the higher ground
+and knock out the Jack. Over to the right is a Helicopter. Destroy this and
+drop to the lower ground. There is (yet) another Jack to deal with, before
+using the flying carpet at the end of the platform.
+
+Jump off once you reach the next platform. On here is a Present containing an
+Elf. Press on and you will see a Helicopter. Take it out, then jump across the
+small platform and you will find a Bell. Advance to the right and take out
+the next couple of Jacks. 
+
+Get on the flying carpet and it will take you upwards. Get off at the top,
+destroy the Jack here, then jump on the next flying carpet. The carpet will
+reach another platform. Stay on the carpet and it will pass right over the
+platform and on to the next. On here you will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |          5e)  T h e  E v i l  S n o w m a n         |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Head to the right, taking out Penguins as you go. You will reach a bridge 
+with a Present in front of it. Inside you will find a Hat. Go over the bridge
+and take out the Snowmen on the other side.
+
+After the Snowmen, you will reach a cliff. Wait for the moving platform to
+come into view, then jump onto it. This platform will take you across the
+crevasse. As it goes, a Trout will continually leap out of the water and
+attack you. Jump as much as possible to avoid it. Get off on the other side
+and move on.
+
+Jump up and shoot magic at the Snowman, which is halfway up the hill. Press
+on and jump on the head of the next Snowman. Go down the hill and open the
+Present at the bottom. In here you will find an Extra Life.
+
+Move over the bridge and open the Present on the other side. Inside this 
+Present is a Bell. Head to the right, knock out the Snowman and wait at the
+end of the cliff. Wait for the moving platform and avoid the Trout as it 
+takes you to the other side.
+
+Here, you will find a Fire Power-Up. This will come in handy probably. Head
+up the hill and you will meet the Evil Snowman. In front of the Snowman,
+there is a cloud moving up and down. Jump on it and stand on its right hand
+side.
+
+As the cloud moves upwards, the Snowman will throw a huge snowball. As soon
+as he has done this, jump up and shoot fire magic at his face. This pretty
+much covers all you need to do. Repeat this until you have hit him eight
+times. He will explode and leave you a load of blue Presents. Collect them
+up, grab the Hat to the right and then exit the level.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |             5f)  O v e r  E n g l a n d             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+This is a mini-game. You will get one of these each time that you defeat a
+boss. They're not really all the important to the plot but it's been thrown in
+here anyway. Basically, you get to do Santa's proper job- dropping presents
+down chimneys.
+
+The presents that you drop are the ones that you have been collecting from
+defeated enemies. Make sure that you only drop the presents down the chimneys
+with smoke coming out of them.
+
+It's not all fun and games though, you need to watch out for the Helicopters
+that hurl themselves at you. Also, watch out for the large hot air balloons
+with Union Jacks on them. They may move slow, but they can catch you out.
+
+When Santa has had enough, you will exit this level and you will get a 
+level password for the next level.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |         5g)  B e f o r e  T h e  F l o o d          |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+                          GENESIS PASSWORD - G8WTK3A
+                             SNES PASSWORD - TNFRN
+
+Grab the Coffee on the right. 
+Take out the Mouse and the Spider, then jump
+over the gap. Knock out the Mouse here and open the Present. Inside you will
+find a Hat. Head on to the right, take out the Spider, then jump onto the
+stairs. 
+
+Press on to the right and you will see a red Present seemingly sat on the
+water. However, it is actually sat on a platform just above the water level.
+Open it up and you will find an Elf. 
+
+Walk over to the right and go up the stairs. At the top you will find a Bell.
+At the end of this platform you will see a narrow board moving in and out of
+the wall. Wait until it appears, then jump onto it. From here jump to the
+right and you will see a Spider.
+
+Now, you will notice the water level rising. It will continue to do so for the
+duration of the level, so you need to be quick. Run to the right and take out
+any Spiders that you meet. Watch out for the Mouse and watch out for the 
+Electro inside the Present. Now go up the stairs and jump over the gap at the
+top.
+
+Advance to the right and knock out the Mouse. At the end of this platform you
+will see another narrow board. Jump on it and it will take you to two more
+boards. One will disappear into the wall and the other will move to the right
+again. Jump straight onto the second board and it will take you to a brick
+platform.
+
+Kill the Spider on here, wait for the board on the right to come out of the
+wall, then jump to it. To the right, take out the Mouse and open the golden
+Present. Inside you will find an Extra Life.
+
+Get on the board next to you and it will move to a platform that moves up and
+down. Get on this, before it moves down too far, jump onto the next platform. 
+As this moves, kill the Mouse on the stone platform, before jumping onto it
+yourself.
+
+Go to the right and take out the Spider. Don't open the red Present, as there
+is a Bomb in it. Grab the Exit Star here.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |            5h)  W o o d  F a c t o r y              |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+You will start on a conveyor belt, so if you are lazy just let it take you to
+the end. Wait for a love heart platform to appear, then jump on it. This will
+take you up to a higher conveyor. Go along this one but watch out for the
+Worm. At the end, wait for the next love heart platform.
+
+Jump off so that you land on the Rat's head. Don't open the nearby Present-
+there's a Bomb inside. Go to the right and open the Present here to free an
+Elf. Now, use the heart platform and jump to the right straight away. Don't
+ride the heart upwards, you don't really need to go up there (you'll only
+find a Worm). Anyway, on the correctly platform grab a Coffee and destroy
+the Brick Monster.
+
+Now, jump on the heart and from here you can reach another heart. From this
+one, leap to the right and land on a conveyor. Try and land on the enemy's
+head. On here is a Bell. Ring it then follow the conveyor along. Take out
+any enemies, including those on the platform above.
+
+At the end of the conveyor, jump on the heart. Jump to the right and take out
+the Rat. Follow these conveyors along (and upwards) until you reach the next
+heart. Jump along the two hearts and knock out the Worm and the Rat which are
+waiting for you on the conveyor.
+
+Follow the conveyors along and at the end of the second, jump onto a heart.
+At the top of its travel, leap onto the next conveyor. Go along it, then get
+on the heart and wait until it moves as far down as it can. Now, jump to the
+right and follow this conveyor. At the end a Boxing Glove will knock you
+back. Jump over this and you will find a Bell.
+
+Open the Present on the right to find an Extra Life. Let the heart take you
+upwards. Get onto the narrow conveyor and then onto the next heart. From
+here get onto another heart and then onto the conveyor on the right. Take out
+the Worm on here.
+
+Drop to the lower conveyor and knock out another Worm. Jump along the hearts
+on the right, which will be moving up and down. You will reach a platform 
+with a Present on it. The Present will reveal a Hat. Just to the right is the
+Exit Star. 
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              5i)  M a g i c  C a v e                |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Open the Present on the right to find an Elf. Carry on and take out the Blob.
+On the lower platform is a Tank. Drop on top of it to take it out. On an even
+lower level there is another Tank.
+
+Don't open the Present down here, it contains a Bomb. Jump up and shoot magic
+at the next Tank. Further to the right, you will find a Rock Monster. You
+can't kill this bad boy, but just stand in front of it and let it jump over
+your head.
+
+Open the Presents nearby. One has a Jack inside, the other has a Hat. Now,
+jump up and knock out the Tank. Just to the right is a cup of Coffee. Go down
+the steps and destroy the Tank at the bottom.
+
+On the next ledge on the right is a Bell. Ring this then take out the Tank
+above. Carry on up the steps, ignore the red Present, then go down the next
+set of steps.
+
+Jump onto the small platform. On the next one is a Rock Monster. Jump and
+land next to it. It will jump right over your head and off into the abyss.
+Take out the Blob on the right. Also on this platform is a Jack which can be
+found in a Present.
+
+On the next platform, jump onto the cloud. This will cause the Rock Monster
+to jump over your head. Jump over the obstacle and onto the edge of the next
+platform. Another Rock Monster will jump over you.
+
+Go to the end of this platform, but watch out for the leg at the very edge.
+If you get too close, it will kick you backwards. Jump over this and onto
+the next platform. Take out the Tank and watch out for the Rock Monster.
+
+Use the cloud to get over the obstacle. Let the cloud on the other side 
+disappear and you will find a Bell. Jump back on the cloud and follow the
+clouds along, over the two obstacles.
+
+Ignore the nearby Present, it contains a Bomb. Jump on the head of the Blob
+on the right. Watch out for the Rock Monster and jump over the leg at the end
+of the platform.
+
+On this next platform, take out the Tank that is right in front of you. To
+the right, you will see two Presents stack up. Shoot magic at them and a
+Rock Monster will appear and jump over you. The second Present was holding
+a Hat.
+
+Press on to the right and take out the Jack. Jump over to the platform with
+the Blob on it, before moving upwards and dealing with another Tank. Head
+over to the right, down the stairs and you will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5j)  S t e e l  F a c t o r y             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Go across the conveyor and on the other side, jump onto the chimney. Now get
+on the next conveyor and take out the Crazy Car that is on here. Next, jump
+onto the air vents/chimneys and knock out the nearby Plane. Ignore the
+Present as there is a Bomb inside.
+
+Go along the conveyors and take out any enemies that you meet. At the end of
+the second one, jump onto a chimney. Here you will find a Present containing
+a Hat and a cup of Coffee. Grab the Coffee and make your way along the next
+two conveyors.
+
+At the end, get on the chimney, then drop to the conveyor below. Destroy the
+Tank on here and jump over the Boxing Glove at the end of the belt. On the
+platform here is a golden Present with a Bell inside. Next to this is another
+cup of Coffee.
+
+Follow the path of platforms and conveyor belts until you reach a platform
+with an Elf and two Presents on it. Open the golden Present, inside is a
+Bell. Leave the red one and press on to the right.
+
+Go over the chimneys and the platform and onto the next conveyor. At the end
+of this conveyor is a red Present containing a Hat. Jump on the heart, then
+take out the Tank. Leap to the next platform and drop down to the conveyor.
+
+At the end, take out the Tank then get on the next conveyor. Leave the Present
+at the end and drop down onto the next belt. Follow the conveyors along and
+jump on the heart. Follow the hearts along and stand on the platform (not
+the conveyor belt below it). On this platform is a Present containing a 
+Crazy Car and an Extra Life.
+
+Drop off of the left hand side of the platform onto the conveyor. At the end
+of one is the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5k)  T h e  T i m e k e e p e r           |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+The Timekeeper is the second boss in the game. He shouldn't really cause you
+much trouble. Head to the right and drop into the halfpipe. Go up the other
+side and you will see the Timekeeper.
+
+He will turn into a ball and roll into the halfpipe. Stand at the bottom and
+wait for him to approach you. As he does, jump over him and bounce on his
+head. This will cause him damage. Repeat this until he is defeated. Should
+he stop rolling on the halfpipe, go and find him again as he will throw cogs
+at you until you do. Once he is back on screen he will drop back into the
+halfpipe.
+
+On his defeat the Timekeeper will give up a few Presents. Go to the right of
+the halfpipe and you will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |             5l)  O v e r  R u s s i a               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+See 5f Over England. The hot air balloons are replaced by satelittes. 
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5m)  W i n t e r  W a t e r s             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+                          GENESIS PASSWORD - X6THTWG
+                             SNES PASSWORD - SLJFT
+
+Head to the right, taking out enemies, until you reach a red Present. Inside
+is an Elf. Jump over the gap and kill the Penguin. When you reach an ice
+float, jump on and it will take you across the water.
+
+On the other side, deal with the Penguin and grab the nearby hat. Press on to
+the right and you will find two Presents. The red one contains a Bomb and the
+gold one an enemy. 
+
+Go down the hill and you will find a Bell. Wait for the ice flow to appear
+then jump on it. Avoid the Trout by jumping and then alight on the other
+side.
+
+Once there, take out the Penguins and ignore the red Present. In the golden
+Present is an Elf. Go past the cave where something is sleeping (presumably
+a polar bear). 
+
+Press on to the right taking out any Penguins that you meet. Jump over the
+gap with a cloud in it. Just to the right is a Bell. Follow the long line of
+clouds over to the right.
+
+On the other side of this abyss, advance to the right and knock out any
+enemies that you meet. Stand on the cloud and jump to the right. Nearby you
+will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |         5n)  S t e e l  E l e v a t o r s           |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Open the Present in front of you which will reveal an Elf. Jump onto the next
+platform and take out the enemy on here. Above the next platform is a cup of
+Coffee. Grab it and move to the right. Take out the Electro nearby.
+
+Press on, past the platform with the Rat on it and over the group of chimneys.
+Here you will find a Bell. Move and knock out any Rats that you meet until you
+reach a two Presents. Inside the red one is a hat. Inside the gold on is an Elf.
+
+Move on and watch out for the hole in the next platform. At the end of the
+platform is a pipe. Stand in it and press the up button. You will move up
+through the pipe and emerge somewhere high above. 
+
+Kill the Electro in front of you. Carry on forward, jump over the next gap
+and take out the next Electro. Leap over the next gap and you will be faced
+with a larger gap. 
+
+Use the ropes hanging above the gap to get to the other side. Drop to the
+ground and take out the Rat. Press on but ignore the Presents. Keep moving to
+the left, jumping over gaps and taking out any enemies.
+
+You will reach another pipe. Go through it and ring the Bell. The Present on
+the left holds a Hat. Now, go to the pipe and press up. You will move up
+through the pipe.
+
+When you emerge there are a number of Electros and Crazy Cars. Take them all
+out and head over to the left. In a gold Present you will find a Hat. Go back
+over to the right and you will see a chain hanging above a large gap. Jump
+onto the chain and press up. The chain will retract and you will move upwards.
+
+Just to the right is a cup of Coffee. Grab it and drop off of the edge of the
+platform. You will land on a cloud. Let the cloud disappear and you will land
+on another. Keep doing this until you hit the ground.
+
+To the right is a Bell. From here jump over the gap and go up the nearby pipe.
+As soon as you emerge, press up again and move up another floor. Up here, go
+over to the right and ring the Bell.
+
+Just to the right, you will find a chain. Grab it and press the down button.
+The chain will release and you will move downwards. As soon as you see the
+spikes below, jump onto the platform on the right.
+
+From here, use the wires to get across the next spike pit. On the other side
+grab the chain and move upwards. Get onto the platform on the left. Jump over
+the spikes and the gap then take out the Electro. On a platform, just to the
+left is an Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5o)  G i f t  W r a p p i n g             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Go to the right and knock out the Electro. Leave the Present, it contains a
+Bomb. Jump onto the conveyor and take out the enemies on here. As you reach
+the present wrapper, jump on top of it and open the golden Present. It
+contains a Hat. Ignore the red one, it holds an Electro.
+
+Drop back onto the conveyor and at the end jump over the Boxing Glove. Deal
+with the nearby Electro and grab the Hat that is in the gold Present. Jump
+across to the next platform and knock out the foes here. Get onto the next
+conveyor belt.
+
+Kill the nearby Electros and make your way along the short conveyors. At
+the end of the third conveyor, open the Present to free an Elf. Proceed to
+the right and ring the Bell. Follow the conveyors upwards and ignore the red
+Present which holds a Bomb. 
+
+Go through the next present wrapper and knock out the two Electros on the
+other side. At the end of this belt, drop to a lower belt and follow this
+over to the right.
+
+You will see two Presents and a cup of coffee overhead. Open the first
+Present to find a Hat. Leave the second, it contains a Bomb. Grab the Coffee
+and jump onto the platform on the right. Take out the Brick Monster then
+jump onto the heart platform.
+
+From here, jump to the platform on the right. Take out the Rat on here then
+open the nearby Present. Inside you will find an Extra Life. Head to the
+right, then defeat the Rat on the lower platform. Leave the Present next to
+it, as it only contains a Bomb. On the conveyor belt below, you will find the
+Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |            5p)  M a g i c  B u b b l e s            |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Go to the right and jump on the flying carpet. It will take you to a higher
+platform. Watch out for the Helicopter and open the Present. An Elf will be
+released. Drop back down to the lower ground and press on to the right.
+
+You will reach another Present that is sat next to a flying carpet. There is
+a Bomb inside, so leave it. Don't jump on the carpet. You can take that route
+but it isn't the best one. Instead, jump over the carpet and land on the very
+edge of the platform. If you land too far onto the ledge, a leg will kick you
+away.
+
+Jump right over the leg and open the nearby Present. Inside you will find a
+Hat. Go to the next platform and take out the Jack. At the end of this
+platform is another leg. Jump over it and as you do, a Rock Monster will
+attack you from a higher ledge. Let it pass overhead, then jump to the next
+platform.
+
+Ring the Bell on this platform. From here, leap onto the cloud and then onto
+the next platform. On here, you will find an Extra Life. The nearby carpet
+will take you downwards, onto another carpet. This carpet will take you
+upwards and over to the right.
+
+Get onto the ledge here, then leap over the leg that will be facing you.
+Watch out for the Helicopter and the Jack. Get to the magic carpet and it
+will take you to a platform with three Presents on it. The left one contains
+a Bomb. The middle one holds a Hat. The right hand one has an Elf inside.
+
+Get on the magic carpet on the left. It will take you to the next platform.
+Get on here and take out the attacking Helicopter. Let the Rock Monster jump
+right over your head, then jump onto the next carpet. It will take you to
+another carpet. Jump onto this one and then jump off at the next ledge.
+
+Go to the right and take out the Jack. You will see the Exit Star below you.
+Head to the right and drop down. Go to the left and open the first Present.
+It holds an Elf. Ignore the second, it contains a Bomb. Walk to the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |          5q)  L o u s e  T h e  M o u s e           |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Head to the right and leave the Present alone. Climb the rope next to it. Up
+here take out the Spider and walk over to the left. Over here is a Present
+containing a Hat. Climb the nearby rope and ignore the Presents on the left
+(there are Bombs in both). 
+
+Over on the right you will notice a Ghost Mouse. This bad boy cannot be
+harmed with Santa's magic. Try and jump over him. Now, see that barrel
+rolling around? Jump on it and use it to leap right over the Boxing Hatstand.
+
+Watch out for the Cactus then jump to the higher platform nearby. Open the
+gold Present to free an Elf. Next, climb the rope and take out the Spider on
+the left. Avoid the Ghost Mouse and jump over the gap. Open the Present on
+the other side to find a Hat.
+
+Advance to the left and climb the stack of barrels. At the top, jump onto the
+nearby platform. Move along it and jump over the Cactus and then the
+Hatstand. Above a stack of barrels here is a switch. Hit it with Santa's
+magic. This will open a door back at the bottom of the area. Kill the Spider,
+then open the gold Present. Inside is a Bell.
+
+Go all the way back to the bottom of this level. Over to the right, jump into
+the hearth of the fire. You will now climb right up the chimney and emerge on
+the roof. Watch out for the Ghost Mouse and deal with any other enemies that
+you meet. Grab the Fire Power-Up then head over to the right.
+
+Take out any enemies that you meet and keep avoiding the Ghost Mice. You will
+come to a red Present containing a Hat. Inside a gold Present you will find
+an Elf. Right next to this is the Exit Star.
+
+You may think that this is the end of the level, but it isn't. I have no
+idea why the Exit Star is here. Anyway, Santa will climb down the inside
+of this chimney.
+
+At the bottom, open the Present and you will find a Hat. Go to the left and
+stand on the barrel to jump over the Hatstand. On the other side, press on.
+Ignore the Ghost Mouse and leave the red Present. Jump over the Cactus then
+take out the line of Spiders.
+
+Drop down the gap in the platform. At the bottom, head over to the right. Go
+down the steps and ignore the Present (inside is an Electro). Knock out the
+Spider then climb down the rope.
+
+At the bottom, go over to the left. Stand on the barrel and jump over the
+Hatstand. Watch out for the Ghost Mouse then take out the Spider. Here you
+will find a Bell. Go back over to the right, past the rope.
+
+Avoid the Ghost Mouse, then jump onto the barrel. From here you can reach
+the platform overhead. Hit the Present to release an Elf. Jump over the
+Cactus and from here you can jump over the Hatstand.
+
+Ignore the first red Present, as it holds a Bomb. A Rat is hiding in the
+second. Drop to the lower platform and knock out the Rat. Slide down the
+rope here. At the bottom, take out the Spider and jump over the Cactus.
+
+Slide down the rope. At the bottom, walk to the right and ignore the other
+ropes. Climb the barrels that make up a set of steps. Jump onto the platform
+at the top. Avoid the Ghost Mouse and open the Present. Inside is an Elf.
+
+Go to the left and deal with the Rat. Keep moving to the left and avoid the
+Ghost Mouse. Open the gold Present and release an Elf. Climb the rope on the
+left and at the top you will find an Extra Life. Slide down the rope and drop
+to the floor. Go to the left to find a Hat.
+
+Walk over to the right and take out the Spider. Avoid the Ghost Mouse, then
+leave the red Present. The Present contains a Rat. Move on and hit the switch
+above a trap door. This will open the door up. Go inside.
+
+You have finally made it to the Louse The Mouse boss.  Move off of the stack
+of barrel and jump onto the conveyor belt. Above the conveyor, there is a 10t
+weight moving around. If you hit the switch beneath it, the weight will drop.
+This will come in handy for you fight with Louse.
+
+Go to the end of the conveyor and you will find Louse. Jump back on the
+conveyor. If Louse gets too close to you, he will hit you with a baseball
+bat. Quickly get onto the conveyor and move up the platforms where the
+switch is.
+
+Wait for Louse to pass beneath the weight, then hit the switch. The weight
+will drop onto Louse, causing him damage. After being hit, you would think
+this would cause him damage. But it doesn't. It merely stuns him for a brief
+moment, so hit him with your magic whilst he is stunned. Louse will leave
+the conveyor to the right after bring hit, returning to his original
+position. Go and  provoke him again and repeat the attack.
+
+After you have hit him 5 times, he will admit defeat and explode into a stack
+of Presents. Grab them and head over to the right where you will find the
+Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              5r)  O v e r  J a p a n                |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+See 5f Over England. The enemies to avoid this time are Kites and Rockets.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |              5s)  N o r t h  P o l e                |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+                          GENESIS PASSWORD - KW3TKH4
+                             SNES PASSWORD - SNJLB
+
+Knock out the nearby Penguin and press on to the right. Ignore the Present,
+it contains a Bomb. Basically keep walking to the right and taking out any
+enemies that you meet. This has got to be one of the laziest level designs in
+the whole history of gaming. And I'm talking less imaginative than Pong.
+
+Anyway, after you have ploughed your way through the enemies, you will reach
+a large abyss. Drop into it to end the level.
+
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |               5t)  D e e p  D o w n                 |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Open the Present on the right to free an Elf. Jump to the cloud and wait for
+it to disappear. Drop to the next cloud and then to the floor. Take out the
+Penguin down here. Head over to the right, jump over the spike pit. Knock out
+any birds that come on the attack. Leave the red Present, it contains a Bomb.
+Eventually you will find a Fire Power-Up.
+
+Head back over to the left, past the clouds at the beginning. Jump onto the
+platform on the left and from here go onto the cloud. The cloud will rise up
+and take you to a couple of Presents. Leave the red one, but you will find a
+Hat in the gold one.
+
+Drop down to the left and take out the Penguin. Go down the steps to the
+right and open the two Presents. You will find an Elf and a Hat. Knock out
+the Penguin on the right and carry on down the steps. At the bottom jump over
+the gap using the cloud if need be. Burn the ice wall on the other side to
+find a reindeer. Walk into it and it will disappear.
+
+Drop down past the cloud. Follow the cloud down to the right until you find
+a Penguin on a platform. Take it out and open the Present. Inside you will
+find an Extra Life.
+
+Follow the clouds downwards until you reach the ground. Kill the Penguin.
+Head over to the left and you will find a few enemies and an Elf. Once you
+are done over there (in fact you don't even need to go if you don't want)
+head back over to the right and you will find the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5u)  B u s y  B a s e m e n t             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+Take out the Rat in front of you. Use the sliding board to get over the gap.
+On the other side, kill the Spider and press on to the right. Deal with the
+next Spider and another Rat. Head down the stairs and you will meet some more
+Spiders at the bottom.
+
+Climb the next staircase and knock out the Rat at the top. Continue onwards
+until you reach a path splits into two- top and bottom. Go along the bottom
+path and you will find a Bell. Come back over to the right and you will see
+a series of sliding boards moving in and out of the wall. Follow the path of
+boards until you reach a golden Present. Open it to find a Hat.
+
+Drop to the ground and head up the stairs. At the top is a red Present
+containing a Bomb. Press on and take out a few more Spiders. You will reach
+another red Present, this one holding an Electro so you can leave this if you
+wish. The present after this withholds a Jack.
+
+Jump onto the sliding board and from here you can reach another board. Now,
+jump onto the narrow platform with a Present on it. The Present contains a
+Hat. Leap across the gap and take out the Rat on the other side.
+
+Just to the right there are 3 sliding boards arranged vertically. On the top
+one is a Present that is holding a Hat. Further to the right, ignore the
+Electro below and take the higher path. On here is a Present with a Bomb
+inside.
+
+Carry on and take out the Spider at the end of this platform. When you reach
+the gap, jump over it and ring the Bell. Now drop into the gap. As soon as
+you land, water will begin to rise from the bottom of the screen, so you need
+to be quick. Open the golden Present on the left. Inside you will find a Hat.
+
+Quickly run to the right and hammer the button to fire the magic. This should
+deal with any Rats that you meet. When the passage opens up, you will find
+the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           5v)  S a n t a ' s  H o u s e             |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+
+Take out the Crazy Car and head to the right. Go up the stairs and open the
+Present at the top. Inside is a Hat. Climb the candycane to the left and at
+the top knock out the Plane.
+
+Go to the right and jump to the small platform nearby. Grab hold of the chain
+that is swinging from the clock. Use it to reach the platform to the right.
+Destroy the Crazy Car on here, then slide down the candycane.
+
+Kill the Crazy Car here and walk to the right. When you reach the wall you
+will be able to see the Exit Star. Unfortunately, you can't reach it yet, so
+instead jump in the nearby basket.
+
+Press up and the basket will move up. There are various different floors that
+you can get off at here, but I would just go all the way to the top. Up here
+grab the Coffee and ring the Bell. Go to the right and take out the Crazy
+Car. There is a golden Present near here. If you need health, wait for the
+Anti-Claus to wear off then open the Present.
+
+Slide down the candycane and ignore the nearby Presents, they all contains
+enemies. Head over to the left and go up the stairs. At the top, ignore the
+Present as there is a Jack inside. Take out the various enemies here and go
+to the left.
+
+At the end of the platform slide down the candycane. At the bottom, take out
+the Roller Skate and open the Present (inside is an Elf). Just to the right is
+a pit with holly in the bottom. Grab hold of the swinging chain to get over
+the pit.
+
+On the other side go down the stairs and jump over the small patch of holly.
+Go down the stairs and deal with the Roller Skate. Go along this floor and
+hit the Plane at the end.
+
+Jump onto the candycane, but watch out, it moves downwards. If you let it
+move Santa down, he will drop off into the holly pit. Make sure you press up
+whilst you jump along the series of candycanes.
+
+On the last candycane, slide to the bottom and open the Present on the left.
+Inside is an Elf. Take out the Crazy Cars to the right. Press on to the right
+and climb the candycane. On the right is another candycane- slide down it.
+
+At the bottom take out the Crazy Car. Go to the left and slide down the
+candycane. At the bottom, go to the right and open the Present. Inside is a
+Hat. Walk over to the left and use the swinging chain to get over the holly
+patch. On the other side is the Exit Star.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |             5w)  O v e r  T h e  U S A              |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+
+See 5f Over England. The enemies to avoid this time are Reindeer, Footballs
+and Helicopters.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |             5w)  M r .  W e a t h e r               |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+
+                          GENESIS PASSWORD - XAHGK9A
+                             SNES PASSWORD - KRLHG
+
+Okay, this is pretty easy for a final boss battle. Mr. Weather will move up
+and down, firing lightning strikes at Santa. Move Santa up and down to avoid
+these. Between the two of you there are 3 clouds. Should a lightning strike
+hit a cloud, it will begin to flash. Hit the flashing cloud with magic. This
+will shoot the lightning back at Mr. Weather. Repeat this 3 or 4 times and
+Mr. Weather will be defeated. Job done.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |           6)  L e v e l  P a s s w o r d s          |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+  G e n e s i s
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Before The Flood.................G8WTK3A
+  Winter Waters....................X6THTWG
+  North Pole.......................KW3TKH4
+
+
+  S N E S
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Before The Flood...................TNFRN
+  Winter Waters......................SLJFT
+  North Pole.........................KRLHG
+
+
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |                  7)  C r e d i t s                  |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+  T h a n k  Y o u s
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+GameFAQs for hosting this.
+
+You, for taking the time to read my guide.
+
+The FAQ Contributors Board members, for being nice.
+
+_____________                                                   _____________
+\           /|                                                 |\           /
+ )         |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|         (
+/          |      8)  C o n t a c t  I n f o r m a t i o n       |          \
+¯¯¯¯¯¯¯¯¯¯¯|_____________________________________________________|¯¯¯¯¯¯¯¯¯¯¯
+
+My contact email is truly.dexterous@hotmail.com. Before contacting me see my
+guidelines below. Follow these and I'm more than willing to help you out.
+
+  D o
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+• Put the game name in the title of your email.
+
+• Read all of the guide before contacting me. Make sure the thing that you 
+  email me about isn't already in the guide.
+
+• Send me anything that you have to add to the guide. I would really
+  appreciate any contributions to this FAQ.
+
+• Praise mail. It's always nice to get good feedback.
+
+• Tell me about a mistake I made, but not typos please, I'll sort them out
+  if I need to.
+
+
+  D o n ' t
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+• Send me emails in txt spk lik ths. Correct English please.
+
+• Send me spam.
+
+• Hate mail. I don't really need to see this. I don't care if you didn't like
+  the FAQ.
+
+• Add me to your IM contacts list. Send me an email instead!
+
+• Email me asking me to join a group/club/forum. Thanks but no thanks.
+
+
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Thank you, that's it until next time. See you around peeps.
+
+    ______           __      ____            __                            
+   /_  __/______  __/ /_  __/ __ \___  _  __/ /____  _________  __  _______
+    / / / ___/ / / / / / / / / / / _ \| |/_/ __/ _ \/ ___/ __ \/ / / / ___/
+   / / / /  / /_/ / / /_/ / /_/ /  __/>  </ /_/  __/ /  / /_/ / /_/ (__  ) 
+  /_/ /_/   \__,_/_/\__, /_____/\___/_/|_|\__/\___/_/   \____/\__,_/____/  
+                   /____/
+Restore Page

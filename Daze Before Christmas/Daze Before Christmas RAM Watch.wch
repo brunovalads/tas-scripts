@@ -1,0 +1,7 @@
+SystemID SNES
+0006EB	w	h	0	WRAM	X pos
+0006EF	w	h	0	WRAM	Y pos
+0006F9	b	h	0	WRAM	HP
+001E66	b	h	0	WRAM	Hats (HP)
+0006FA	b	u	0	WRAM	Invincibility timer
+
