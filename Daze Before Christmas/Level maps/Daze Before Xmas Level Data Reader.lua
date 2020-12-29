@@ -61,14 +61,21 @@ end
 
 -- Tool to force the camera inside a region that is better for screenshoting the Graphics Debugger
 local Camera_lock_on = false
+local Camera_manipulate_on = false
+local Camera_x_manip, Camera_y_manip = u16(WRAM.camera_x), u16(WRAM.camera_y)
 local function force_camera()
   if not Camera_lock_on then return end
   
   local camera_x = u16(WRAM.camera_x)
   local camera_y = u16(WRAM.camera_y) 
   
-  if camera_x > 0x00F7 then w16(WRAM.camera_x, 0x00F7) end --; w16(0x04AD, 0x00FF) ; w16(0x044A, 0x00FF) ; w16(0x04B1, 0x00FF) end
-  if camera_y > 0x0115 then w16(WRAM.camera_y, 0x0115) end --; w16(0x04AF, 0x011F) ; w16(0x044C, 0x011F) end
+  if Camera_manipulate_on then
+    w16(WRAM.camera_x, Camera_x_manip)
+    w16(WRAM.camera_y, Camera_y_manip)
+  else
+    if camera_x > 0x00F7 then w16(WRAM.camera_x, 0x00F7) end --; w16(0x04AD, 0x00FF) ; w16(0x044A, 0x00FF) ; w16(0x04B1, 0x00FF) end
+    if camera_y > 0x0115 then w16(WRAM.camera_y, 0x0115) end --; w16(0x04AF, 0x011F) ; w16(0x044C, 0x011F) end
+  end
 end
 
 
@@ -150,7 +157,7 @@ local function write_metatiles(page)
   local index_in_level
   for i = 1, 64 do
     --               which column   account for level width                                         account for height limit, so will use more 8 columns (TODO: this last parcel is not needed anymore i guess)
-    index_in_level = (i-1)%8      + Level_width_metatiles*(floor((i-1)/8)%Level_height_metatiles) + 8*floor((i-1)/(8*Level_height_metatiles))
+    index_in_level = (i-1)%8      + Level_width_metatiles*(floor((i-1)/8)%Level_height_metatiles) + 8*floor((i-1)/(8*Level_height_metatiles)) -- add values to i to shift the writing area, necessary for the autoscrolling levels (most of them +80 do the job)
     
     if Metatiles_unique[i + page*64] then -- to avoid nil indexing when a page is not completely full
       w16(WRAM.metatile_data + 2*index_in_level, Metatiles_unique[i + page*64])
@@ -175,10 +182,10 @@ local Commands_form = {}
 function Commands_form.create_window()
 
   -- Create form
-  local form_width, form_height = 300, 110
+  local form_width, form_height = 300, 150
   Commands_form.form = forms.newform(form_width, form_height, "Level Data Reader")
   
-  local xform, yform, delta_x, delta_y = 4, 10, 20, 20
+  local xform, yform, delta_x, delta_y = 4, 10, 120, 20
   
   -- Button to scan the level data
   Commands_form.scan_level = forms.button(Commands_form.form, "Scan level", function()
@@ -223,7 +230,49 @@ function Commands_form.create_window()
   -- Camera lock option
   xform, yform = 5, yform + 1.5*delta_y
   Commands_form.camera_lock = forms.checkbox(Commands_form.form, "Camera lock", xform, yform)
-  forms.setproperty(Commands_form.camera_lock, "Checked", Camera_lock_on)  
+  forms.setproperty(Commands_form.camera_lock, "Checked", Camera_lock_on)
+  
+  -- Camera manipulate option
+  yform = yform + delta_y
+  Commands_form.camera_manipulate = forms.checkbox(Commands_form.form, "Camera manip", xform, yform)
+  forms.setproperty(Commands_form.camera_manipulate, "Checked", Camera_manipulate_on)
+  
+  -- Manual camera manipulation
+    -- Camera x
+  xform, yform = xform + delta_x, yform - delta_y
+  forms.label(Commands_form.form, "Camera x", xform, yform, 70, 20)
+  yform = yform + delta_y
+  
+      -- decrease
+  forms.button(Commands_form.form, "-", function()
+    --if u16(WRAM.camera_x) < 0x08 then w16(WRAM.camera_x, 0) else w16(WRAM.camera_x, u16(WRAM.camera_x) - 0x08) end
+    if Camera_x_manip < 0x08 then Camera_x_manip = 0 else Camera_x_manip = Camera_x_manip - 0x08 end
+  end, xform, yform, 24, 24)
+  xform = xform + 24
+  
+      -- increase
+  forms.button(Commands_form.form, "+", function()
+    --if u16(WRAM.camera_x) >= 0xFFF8 then w16(WRAM.camera_x, 0xFFFF) else w16(WRAM.camera_x, u16(WRAM.camera_x) + 0x08) end
+    if Camera_x_manip >= 0xFFF8 then Camera_x_manip = 0xFFFF else Camera_x_manip = Camera_x_manip + 0x08 end
+  end, xform, yform, 24, 24)
+  
+    -- Camera y
+  xform, yform = xform + 50, yform - delta_y
+  forms.label(Commands_form.form, "Camera y", xform, yform, 70, 20)
+  yform = yform + delta_y
+  
+      --decrease
+  forms.button(Commands_form.form, "-", function()
+    --if u16(WRAM.camera_y) < 0x08 then w16(WRAM.camera_y, 0) else w16(WRAM.camera_y, u16(WRAM.camera_y) - 0x08) end
+    if Camera_y_manip < 0x08 then Camera_y_manip = 0 else Camera_y_manip = Camera_y_manip - 0x08 end
+  end, xform, yform, 24, 24)
+  
+      -- increase
+  xform = xform + 24
+  forms.button(Commands_form.form, "+", function()
+    --if u16(WRAM.camera_y) >= 0xFFF8 then w16(WRAM.camera_y, 0xFFFF) else w16(WRAM.camera_y, u16(WRAM.camera_y) + 0x08) end
+    if Camera_y_manip >= 0xFFF8 then Camera_y_manip = 0xFFFF else Camera_y_manip = Camera_y_manip + 0x08 end
+  end, xform, yform, 24, 24)
 end
 Commands_form.create_window()
 
@@ -231,12 +280,13 @@ Commands_form.create_window()
 -- Update options based on the form
 function Commands_form.evaluate_form()
   Camera_lock_on = forms.ischecked(Commands_form.camera_lock) or false
+  Camera_manipulate_on = forms.ischecked(Commands_form.camera_manipulate) or false
 end
 
 
 -- Forces all forms to close when script is stopped or reset
 event.onexit(function()
-  forms.destroyall()
+  forms.destroy(Commands_form.form)
 end)
 
 
