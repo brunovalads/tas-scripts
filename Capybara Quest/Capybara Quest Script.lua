@@ -56,7 +56,7 @@ local s24 = memory.read_s24_le
 local w24 = memory.write_u24_le
 
 -- Font settings
-local BIZHAWK_FONT_WIDTH = 10  -- correction to the scale is done in bizhawk_screen_info()
+local BIZHAWK_FONT_WIDTH = 10  -- correction to the scale is done in biz.screen_info()
 local BIZHAWK_FONT_HEIGHT = 18
 
 -- Drawing function renaming
@@ -82,10 +82,63 @@ local Generic_previous = false
 --################################################################################################################################################################
 -- GENERAL UTILITIES
 
+local biz = {}
+
+-- Check if the script is running on BizHawk
+function biz.check_emulator()
+    if not bizstring then
+        error("\n\nThis script only works with BizHawk emulator.\nVisit https://tasvideos.org/Bizhawk/ReleaseHistory to download the latest version.")
+    end
+end
+biz.check_emulator()
+
+-- Check the name of the ROM domain (as it might have differences between cores)
+biz.memory_domain_list = memory.getmemorydomainlist()
+function biz.check_ROM_domain()
+    for key, domain in ipairs(biz.memory_domain_list) do
+        if domain:find("ROM") then return domain end
+    end
+    -- If didn't find ROM domain then
+    error("This core doesn't have ROM domain exposed for the script, please change the core!")
+end
+biz.ROM_domain = biz.check_ROM_domain()
+
+-- Check the game name in ROM
+function biz.game_name()
+    local game_name = ""
+    for i = 0x0, 0xC do
+        game_name = game_name .. string.char(memory.read_u8(0x0134 + i, biz.ROM_domain))
+    end
+    return game_name
+end
+
+-- Check if it's Capybara Quest (any version)
+local Is_Capy = false
+if biz.game_name() == "CAPYBARAQUEST" then Is_Capy = true end
+
+-- Failsafe to prevent script running with other games
+if not Is_Capy then
+    error("\n\nThis script is only for Capybara Quest (GBC)!\n"..
+          "Get the game here: https://maxthetics.itch.io/capybara-quest \n"..
+          "Contact the script author here: https://github.com/brunovalads/tas-scripts")
+end
+
+-- Check game version
+local Game_version = ""
+local Game_versions_hashes = {
+    ["2F4444611CA74F29EBED5AA905FF4B1936D7F89A2A43389C5DB3E17523E8695D"] = "1.0",
+    ["FB1BE9C9833B9A8D19275F5D5D3AC578A173AB90C5EBC8E3F8F69749B542DE8C"] = "1.1",
+}
+Game_version = Game_versions_hashes[memory.hash_region(0, memory.getmemorydomainsize(biz.ROM_domain), biz.ROM_domain)]
+if Game_version == nil then
+    error("\n\nThe script is not ready for this version of Capybara Quest (GBC)!\n"..
+      "Contact the script author here: https://github.com/brunovalads/tas-scripts")
+end
+
 -- Get screen dimensions of the emulator and the game
 local PC, Game = {}, {}
 local Scale
-local function bizhawk_screen_info()
+function biz.screen_info()
     -- Get/calculate screen scale -------------------------------------------------
     if client.borderwidth() == 0 then -- to avoid division by zero bug when borders are not yet ready when loading the script
         Scale = 2 -- because is the one I always use
@@ -156,7 +209,7 @@ end
 
 -- Get main BizHawk status
 local Framecount, Movie_active, Movie_size
-local function bizhawk_status()
+function biz.movie_status()
     Framecount = emu.framecount()
     if Movie_active and not Movie_size then
         Movie_size = movie.length()
@@ -376,6 +429,7 @@ local RAM = {
 -- Data for all levels
 local Level = {}
 Level.data = {
+    -- 1.0
     ["4722F05EC824"] = {id = 01, name = "Sunlight Plains - 1"  , objects = 07, width = 0x0640, height = 0x0120},
     ["63231840C824"] = {id = 02, name = "Sunlight Plains - 2"  , objects = 07, width = 0x0640, height = 0x0120},
     ["47234063C824"] = {id = 03, name = "Sunlight Plains - 3"  , objects = 07, width = 0x0640, height = 0x0120},
@@ -398,6 +452,20 @@ Level.data = {
     ["40060640C644"] = {id = 17, name = "Construction Site - 2", objects = 15, width = 0x0630, height = 0x0220},
     ["43070040C644"] = {id = 18, name = "Construction Site - 3", objects = 14, width = 0x0630, height = 0x0220},
     ["43080040C644"] = {id = 19, name = "Construction Site - 4", objects = 16, width = 0x0630, height = 0x0220},
+    
+    ["791F00401444"] = {id = 999, name = "Glitched Room"       , objects = 02, width = 0x00A0, height = 0x0220}, -- accessible from a certain level...
+    
+    -- 1.1 revisions
+    ["6320205CC824"] = {id = 07, name = "Shadowy Forest - 2"   , objects = 11, width = 0x0640, height = 0x0120},
+    ["4621A045C824"] = {id = 08, name = "Shadowy Forest - 3"   , objects = 10, width = 0x0640, height = 0x0120},
+    ["6321C061C824"] = {id = 09, name = "Shadowy Forest - 4"   , objects = 11, width = 0x0640, height = 0x0120},
+    ["6122D042C824"] = {id = 10, name = "Shadowy Forest - 5"   , objects = 10, width = 0x0640, height = 0x0120},
+    
+    ["4C15134D3CC6"] = {id = 15, name = "Snowy Peaks - 5"      , objects = 16, width = 0x01E0, height = 0x0630},
+    
+    ["42060640C644"] = {id = 17, name = "Construction Site - 2", objects = 15, width = 0x0630, height = 0x0220},
+    
+    ["7A1F6C411444"] = {id = 999, name = "Glitched Room"       , objects = 02, width = 0x00A0, height = 0x0220}, -- accessible from a certain level...
 }
 Level.dimensions = {}
 for k, data in pairs(Level.data) do
@@ -448,24 +516,44 @@ for id = 01, 19 do
 end
 ]]
 
--- Objects data, indexed by type_ptr (RAM.objects_type_pointer)
-local Objects = {
-    [0x0000] = {name = "[empty]", nickname = "[]"},
-    [0x71A1] = {name = "Capybara (sleeping)", nickname = "Capy"},
-    [0x71F0] = {name = "Springboard", nickname = "Spring"},
-    [0x7223] = {name = "Baby Capybara", nickname = "Baby"},
-    [0x7264] = {name = "Heart", nickname = "Heart"},
-    [0x72D8] = {name = "Save computer", nickname = "Save"},
-    [0x730B] = {name = "Sign", nickname = "Sign"},
-    [0x74EB] = {name = "Turnip Bandit", nickname = "Bandit"},
-    [0x7C8A] = {name = "Skeleton", nickname = "Skelet"},
-    [0x7CED] = {name = "Cannon", nickname = "Cannon"},
-    [0x7D3E] = {name = "Yuzu", nickname = "Yuzu"},
-    [0x7DA9] = {name = "Bat", nickname = "Bat"},
-    [0x7DFA] = {name = "Flag", nickname = "Flag"},
-    [0x7E68] = {name = "Capybara", nickname = "Capy"},
-    [0x7E85] = {name = "???", nickname = "???"},
+-- Objects data, indexed by Game_version then type_ptr (RAM.objects_type_pointer)
+local Objects_by_version = {
+    ["1.0"] = {
+        [0x0000] = {name = "[empty]", nickname = "[]"},
+        [0x71A1] = {name = "Capybara (sleeping)", nickname = "Capy"},
+        [0x71F0] = {name = "Springboard", nickname = "Spring"},
+        [0x7223] = {name = "Baby Capybara", nickname = "Baby"},
+        [0x7264] = {name = "Heart", nickname = "Heart"},
+        [0x72D8] = {name = "Save computer", nickname = "Save"},
+        [0x730B] = {name = "Sign", nickname = "Sign"},
+        [0x74EB] = {name = "Turnip Bandit", nickname = "Bandit"},
+        [0x7C8A] = {name = "Skeleton", nickname = "Skelet"},
+        [0x7CED] = {name = "Cannon", nickname = "Cannon"},
+        [0x7D3E] = {name = "Yuzu", nickname = "Yuzu"},
+        [0x7DA9] = {name = "Bat", nickname = "Bat"},
+        [0x7DFA] = {name = "Flag", nickname = "Flag"},
+        [0x7E68] = {name = "Capybara", nickname = "Capy"},
+        [0x7E85] = {name = "???", nickname = "???"},
+    },
+    ["1.1"] = {
+        [0x0000] = {name = "[empty]", nickname = "[]"},
+        [0x40F0] = {name = "Capybara", nickname = "Capy"},
+        [0x6149] = {name = "Springboard", nickname = "Spring"},
+        [0x7359] = {name = "Capybara (sleeping)", nickname = "Capy"},
+        [0x738C] = {name = "Baby Capybara", nickname = "Baby"},
+        [0x73CD] = {name = "Heart", nickname = "Heart"},
+        [0x7441] = {name = "Save computer", nickname = "Save"},
+        [0x7474] = {name = "Sign", nickname = "Sign"},
+        [0x74EB] = {name = "Turnip Bandit", nickname = "Bandit"},
+        [0x7C63] = {name = "Skeleton", nickname = "Skelet"},
+        [0x7CC6] = {name = "Cannon", nickname = "Cannon"},
+        [0x7D17] = {name = "Yuzu", nickname = "Yuzu"},
+        [0x7D82] = {name = "Bat", nickname = "Bat"},
+        [0x7DD3] = {name = "Flag", nickname = "Flag"},
+        [0x7E5E] = {name = "???", nickname = "???"},
+    },
 }
+local Objects = Objects_by_version[Game_version]
 
 
 -- Converts the in-game (x, y) to emu-screen coordinates
@@ -511,6 +599,9 @@ local function main_display()
     local timer_str = frame_time(Framecount, true)
     draw.text(0, 0, fmt("%s", timer_str), "white", "bottomright")
     
+    --- Display game version
+    draw.text(0, 0, fmt("Game version: %s", Game_version), "white", "topright")
+    
     --- Check if is level mode
     local is_level_mode = u8(RAM.is_level_mode) ~= 0x00
     if not is_level_mode then gui.clearGraphics() ; return end
@@ -518,35 +609,7 @@ local function main_display()
     --- Dark filter
     local filter_alpha = 0x55
     draw.rectangle(OPTIONS.left_gap, OPTIONS.top_gap, 256, 224, filter_alpha*0x1000000, filter_alpha*0x1000000)
-    --[[
-    --- Block grid
-    local block_id, block_type
-    local colour_border, colour_fill
-    for y = 0, 14 do
-        for x = 0, 15 do
-            -- Get the colour according to the block type
-            block_id = y*16 + x
-            block_type = u8(RAM.blocks + block_id)
-            if block_type == 0 then
-                colour_border, colour_fill = 0x80808080, nil
-            elseif block_type == 1 then
-                colour_border, colour_fill = 0x80FF0000, 0x60FF0000
-            elseif block_type == 2 then
-                colour_border, colour_fill = 0x8000FF00, 0x6000FF00
-            else
-                colour_border, colour_fill = 0x8000FFFF, nil --0x8000FFFF
-            end
-            
-            -- Draw the grid
-            if block_type ~= 0 then
-                draw.rectangle(OPTIONS.left_gap + x*16, OPTIONS.top_gap - 8 + y*16, 15, 15, colour_border, colour_fill)
-            end
-            
-            -- Draw the minimap
-            draw.pixel(1 + x, 70 + y, colour_border)
-        end
-    end
-    ]]
+    
     --[[
     --- Block grid
     local x_origin, y_origin = screen_coordinates(0, 0, Camera_x, Camera_y)
@@ -588,7 +651,6 @@ local function main_display()
     -- Display player info
     local i = 0
     draw.text(2, 60 + i * BIZHAWK_FONT_HEIGHT, fmt("Pos: %03X.%x, %03X.%x %s", x_pos, x_subpos, y_pos, y_subpos, player_dir == 1 and ">" or "<")); i = i + 1
-    --draw.text(2, 60 + i * BIZHAWK_FONT_HEIGHT, fmt("Speed: %+X, %+X", x_speed, y_speed)); i = i + 1
     draw.text(2, 60 + i * BIZHAWK_FONT_HEIGHT, fmt("Speed: %s, %s", x_speed_str, y_speed_str)); i = i + 1
     --draw.text(2, 60 + i * BIZHAWK_FONT_HEIGHT, fmt("Delta: %+X, %+X", dx_pos_raw, dy_pos_raw)); i = i + 1
     --draw.text(2, 60 + i * BIZHAWK_FONT_HEIGHT, fmt("Delta: %s, %s", signed8hex(dx_pos_raw, true), signed8hex(dy_pos_raw, true))); i = i + 1
@@ -661,14 +723,13 @@ local function main_display()
     local yuzu_taken = false
     local have_cannons = false
     local ending_x, ending_y = 0, 0
-    --local anim_frames, type_ptrs = {}, {} -- RESEARCH/REMOVE
+    --local anim_frames, type_ptrs = {}, {} -- RESEARCH
     for slot = 0x0, 0x13 do
         -- Fade slots not used in the current level
         local empty_slot = false
         if Level.data[level_identifier] then
             if slot+1 > Level.data[level_identifier].objects then
                 empty_slot = true
-                --break
             end
         end
         
@@ -702,6 +763,8 @@ local function main_display()
             name = Objects[type_ptr].name
             nickname = Objects[type_ptr].nickname
         end
+        if name == "____________" then name = fmt("$%04X !!!", type_ptr) end
+        if nickname == "_____" then nickname = fmt("$%04X !!!", type_ptr) end
         if empty_slot then name = "[empty]" end
         
         -- Display pixel position on screen
@@ -711,17 +774,16 @@ local function main_display()
         
         -- Display hitbox (and some extra info) on screen, if object is being processed/rendered
         if is_processed and not empty_slot then
-            --draw.rectangle(OPTIONS.left_gap + x_screen, OPTIONS.top_gap - 8 + y_screen, 15, 15, colour-0x80000000)
-            -- Special cases:
-            -- for Save Computers and Signs
-            if type_ptr == 0x72D8 or type_ptr == 0x730B then
+            -- Special cases...
+            -- ...for Save Computers and Signs
+            if name == "Save Computer" or name == "Sign" then
                 if player_dir == 1 then -- player is facing right
                     draw.rectangle(OPTIONS.left_gap + x_screen - 8, OPTIONS.top_gap - 8 + y_screen, 15+8, 15, colour-0x80000000)
                 else
                     draw.rectangle(OPTIONS.left_gap + x_screen, OPTIONS.top_gap - 8 + y_screen, 15+8, 15, colour-0x80000000)
                 end
-            -- for Flags and Baby Capybara
-            elseif type_ptr == 0x7DFA or type_ptr == 0x7223 then
+            -- ...for Flags and Baby Capybara
+            elseif name == "Flag" or name == "Baby Capybara" then
                 draw.line(OPTIONS.left_gap + x_screen - 0x29, OPTIONS.top_gap - 24 + y_screen, OPTIONS.left_gap + x_screen - 0x29, OPTIONS.top_gap + 7 + y_screen, colour)
                 draw.pixel_text(OPTIONS.left_gap + x_screen - 0x27, OPTIONS.top_gap - 24 + y_screen, "AAA here", colour)
                 draw.rectangle(OPTIONS.left_gap + x_screen, OPTIONS.top_gap - 8 + y_screen, 15, 15, colour-0x80000000)
@@ -754,15 +816,15 @@ local function main_display()
             end
             debug_str = debug_str .. fmt("$%04X ", 0xC000 + 0x00E9 + offset)
             
-            --type_ptrs[slot] = type_ptr -- RESEARCH/REMOVE
-            --anim_frames[slot] = anim_frame -- RESEARCH/REMOVE
+            --type_ptrs[slot] = type_ptr -- RESEARCH
+            --anim_frames[slot] = anim_frame -- RESEARCH
         end
         
         -- Display object table
         draw.text(table_x, table_y + slot * BIZHAWK_FONT_HEIGHT, fmt("#%02X: (%03X.%x, %03X.%x) %s %s %s", slot, x_pos, x_subpos, y_pos, y_subpos, direction, OPTIONS.DEBUG and "" or name, debug_str), colour)
         
         -- Check if yuzu was taken in this level (could use RAM.yuzu_flags), and draw direction line if not taken
-        if type_ptr == 0x7D3E and not empty_slot then
+        if name == "Yuzu" and not empty_slot then
             if bit.check(flags, 2) then
                 yuzu_taken = true
             else
@@ -771,12 +833,12 @@ local function main_display()
         end
 
         -- Check if there is at least a cannon in this level, in order to display cannonballs later
-        if type_ptr == 0x7CED then
+        if name == "Cannon" then
             have_cannons = true
         end
         
         -- Store the level ending position (Flag or Baby Capybara)
-        if (type_ptr == 0x7DFA or type_ptr == 0x7223) and not empty_slot then
+        if (name == "Flag" or name == "Baby Capybara") and not empty_slot then
             ending_x, ending_y = x_pos_raw, y_pos_raw
         end
     end
@@ -898,14 +960,14 @@ local function main_display()
         print(fmt("\n, width = 0x%04X, height = 0x%04X", Camera_x + 160, Camera_y + 144))
     end]]
     
-    --[[ Print level "identifier"
+    -- Print level "identifier"
     if button_Up and button_Down then
         local level_identifier = ""
         for addr = 0x0500, 0x0505 do
             level_identifier = level_identifier .. fmt("%02X", u8(addr))
         end
         print("\n\""..level_identifier.."\"")
-    end]]
+    end
     --[[
     -- Screenshot and store progress, to make the level map later
     if button_Up and button_Down then 
@@ -1198,8 +1260,8 @@ while true do
     -- Prevent cheats while recording movie
     if movie.isloaded() then OPTIONS.CHEATS = false end
     -- Read very important emu stuff
-    bizhawk_screen_info()
-    bizhawk_status()
+    biz.screen_info()
+    biz.movie_status()
     Generic_previous = Generic_current
     -- Update main game values and display these stuff
     main_game_scan()

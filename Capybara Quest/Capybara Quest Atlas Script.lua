@@ -25,7 +25,7 @@ local OPTIONS = {
     
     ---- DEBUG AND CHEATS ----
     DEBUG = false, -- to display debug info for script development only!
-    CHEATS = false, -- to help research, ALWAYS DISABLED WHEN RECORDING MOVIES
+    CHEATS = true, -- to help research, ALWAYS DISABLED WHEN RECORDING MOVIES
 }
 OPTIONS.left_gap_base = OPTIONS.left_gap
 OPTIONS.right_gap_base = OPTIONS.right_gap
@@ -54,7 +54,7 @@ local s24 = memory.read_s24_le
 local w24 = memory.write_u24_le
 
 -- Font settings
-local BIZHAWK_FONT_WIDTH = 10  -- correction to the scale is done in bizhawk_screen_info()
+local BIZHAWK_FONT_WIDTH = 10  -- correction to the scale is done in biz.screen_info()
 local BIZHAWK_FONT_HEIGHT = 18
 
 -- Drawing function renaming
@@ -96,10 +96,63 @@ end
 --################################################################################################################################################################
 -- GENERAL UTILITIES
 
+local biz = {}
+
+-- Check if the script is running on BizHawk
+function biz.check_emulator()
+    if not bizstring then
+        error("\n\nThis script only works with BizHawk emulator.\nVisit https://tasvideos.org/Bizhawk/ReleaseHistory to download the latest version.")
+    end
+end
+biz.check_emulator()
+
+-- Check the name of the ROM domain (as it might have differences between cores)
+biz.memory_domain_list = memory.getmemorydomainlist()
+function biz.check_ROM_domain()
+    for key, domain in ipairs(biz.memory_domain_list) do
+        if domain:find("ROM") then return domain end
+    end
+    -- If didn't find ROM domain then
+    error("This core doesn't have ROM domain exposed for the script, please change the core!")
+end
+biz.ROM_domain = biz.check_ROM_domain()
+
+-- Check the game name in ROM
+function biz.game_name()
+    local game_name = ""
+    for i = 0x0, 0xC do
+        game_name = game_name .. string.char(memory.read_u8(0x0134 + i, biz.ROM_domain))
+    end
+    return game_name
+end
+
+-- Check if it's Capybara Quest (any version)
+local Is_Capy = false
+if biz.game_name() == "CAPYBARAQUEST" then Is_Capy = true end
+
+-- Failsafe to prevent script running with other games
+if not Is_Capy then
+    error("\n\nThis script is only for Capybara Quest (GBC)!\n"..
+          "Get the game here: https://maxthetics.itch.io/capybara-quest \n"..
+          "Contact the script author here: https://github.com/brunovalads/tas-scripts")
+end
+
+-- Check game version
+local Game_version = ""
+local Game_versions_hashes = {
+    ["2F4444611CA74F29EBED5AA905FF4B1936D7F89A2A43389C5DB3E17523E8695D"] = "1.0",
+    ["FB1BE9C9833B9A8D19275F5D5D3AC578A173AB90C5EBC8E3F8F69749B542DE8C"] = "1.1",
+}
+Game_version = Game_versions_hashes[memory.hash_region(0, memory.getmemorydomainsize(biz.ROM_domain), biz.ROM_domain)]
+if Game_version == nil then
+    error("\n\nThe script is not ready for this version of Capybara Quest (GBC)!\n"..
+      "Contact the script author here: https://github.com/brunovalads/tas-scripts")
+end
+
 -- Get screen dimensions of the emulator and the game
 local PC, Game = {}, {}
 local Scale
-local function bizhawk_screen_info()
+function biz.screen_info()
     -- Get/calculate screen scale -------------------------------------------------
     if client.borderwidth() == 0 then -- to avoid division by zero bug when borders are not yet ready when loading the script
         Scale = 2 -- because is the one I always use
@@ -170,7 +223,7 @@ end
 
 -- Get main BizHawk status
 local Framecount, Movie_active, Movie_size
-local function bizhawk_status()
+function biz.movie_status()
     Framecount = emu.framecount()
     if Movie_active and not Movie_size then
         Movie_size = movie.length()
@@ -340,6 +393,7 @@ local RAM = {
 -- Data for all levels
 local Level = {}
 Level.data = {
+    -- 1.0
     ["4722F05EC824"] = {id = 01, name = "Sunlight Plains - 1"  , objects = 07, width = 0x0640, height = 0x0120},
     ["63231840C824"] = {id = 02, name = "Sunlight Plains - 2"  , objects = 07, width = 0x0640, height = 0x0120},
     ["47234063C824"] = {id = 03, name = "Sunlight Plains - 3"  , objects = 07, width = 0x0640, height = 0x0120},
@@ -362,6 +416,20 @@ Level.data = {
     ["40060640C644"] = {id = 17, name = "Construction Site - 2", objects = 15, width = 0x0630, height = 0x0220},
     ["43070040C644"] = {id = 18, name = "Construction Site - 3", objects = 14, width = 0x0630, height = 0x0220},
     ["43080040C644"] = {id = 19, name = "Construction Site - 4", objects = 16, width = 0x0630, height = 0x0220},
+    
+    ["791F00401444"] = {id = 999, name = "Glitched Room"       , objects = 02, width = 0x00A0, height = 0x0220}, -- accessible from a certain level...
+    
+    -- 1.1 revisions
+    ["6320205CC824"] = {id = 07, name = "Shadowy Forest - 2"   , objects = 11, width = 0x0640, height = 0x0120},
+    ["4621A045C824"] = {id = 08, name = "Shadowy Forest - 3"   , objects = 10, width = 0x0640, height = 0x0120},
+    ["6321C061C824"] = {id = 09, name = "Shadowy Forest - 4"   , objects = 11, width = 0x0640, height = 0x0120},
+    ["6122D042C824"] = {id = 10, name = "Shadowy Forest - 5"   , objects = 10, width = 0x0640, height = 0x0120},
+    
+    ["4C15134D3CC6"] = {id = 15, name = "Snowy Peaks - 5"      , objects = 16, width = 0x01E0, height = 0x0630},
+    
+    ["42060640C644"] = {id = 17, name = "Construction Site - 2", objects = 15, width = 0x0630, height = 0x0220},
+    
+    ["7A1F6C411444"] = {id = 999, name = "Glitched Room"       , objects = 02, width = 0x00A0, height = 0x0220}, -- accessible from a certain level...
 }
 Level.dimensions = {}
 for k, data in pairs(Level.data) do
@@ -386,6 +454,7 @@ local Objects = {
     [0x7E68] = {name = "Capybara", nickname = "Capy"},
     [0x7E85] = {name = "???", nickname = "???"},
 }
+
 
 -- Palettes, indexed by palette, then colour, then fade phase
 local Palettes = {
@@ -562,6 +631,7 @@ local function main_display()
     }
     local palette_phase = u8(RAM.fade_phase)
     local bg_colour = bg_colours[world][palette_phase+1]
+    if world == 0 then bg_colour = bg_colours[2][palette_phase+1] end -- to conveniently handle the Glitched Room
     -- ...left
     draw.rectangle(0, 0, OPTIONS.left_gap-1, Game.screen_height-1, bg_colour, bg_colour)
     -- ...right
@@ -574,6 +644,7 @@ local function main_display()
     -- Display level image on screen padding...
     local path = "Level Maps\\"
     local file_name = fmt("Level %02d pal %d.png", level_id, palette_phase)
+    if level_name == "Glitched Room" then file_name = fmt("Glitched Room pal %d.png", palette_phase) end
     --gui.drawImageRegion(string path, int source_x, int source_y, int source_width, int source_height, int dest_x, int dest_y, [int? dest_width = nil], [int? dest_height = nil], [string surfacename = nil])
     -- ...left
     draw.image_region(path..file_name, Previous.Camera_x - OPTIONS.left_gap, Previous.Camera_y - OPTIONS.top_gap, OPTIONS.left_gap, Game.screen_height, 0, 0)
@@ -585,6 +656,19 @@ local function main_display()
     draw.image_region(path..file_name, Previous.Camera_x, Previous.Camera_y + Game.buffer_height, Game.buffer_width, OPTIONS.bottom_gap, OPTIONS.left_gap, Game.bottom_padding_start)
     -- ...game area
     if bg_colour == 0xffF8F8F8 then draw.rectangle(OPTIONS.left_gap, OPTIONS.top_gap, Game.buffer_width-1, Game.buffer_height-1, bg_colour, bg_colour) end
+    
+    -- Display custom stuff to handle game versions
+    if Game_version == "1.1" then
+        -- Snowy Peaks - 2 cannon removed
+        if level_id == 12 then
+            local remov_cannon_x, remov_cannon_y = 0x0100, 0x0478
+            local remov_cannon_x_screen, remov_cannon_y_screen = screen_coordinates(remov_cannon_x, remov_cannon_y, Previous.Camera_x, Previous.Camera_y)
+            if remov_cannon_x_screen < 0 or remov_cannon_x_screen + 16 > 160 or remov_cannon_y_screen-8 < 0 or remov_cannon_y_screen-8 + 16 > 144 then -- check to avoid drawing inside the game area
+                draw.rectangle(OPTIONS.left_gap + remov_cannon_x_screen, OPTIONS.top_gap - 8 + remov_cannon_y_screen, 16, 32, 0xffF4E8CC, 0xffF4E8CC)
+                draw.rectangle(OPTIONS.left_gap + remov_cannon_x_screen, OPTIONS.top_gap - 8 + remov_cannon_y_screen + 24, 16, 8, 0xffF3E0D5, 0xffF3E0D5)
+            end
+        end
+    end
     
     -- Display the level info
     if OPTIONS.DEBUG then
@@ -619,6 +703,30 @@ local function main_display()
         local x_pos, y_pos = floor(x_pos_raw/0x10), floor(y_pos_raw/0x10)
         local x_subpos, y_subpos = x_pos_raw - x_pos*0x10, y_pos_raw - y_pos*0x10
         local x_screen, y_screen = screen_coordinates(x_pos, y_pos, Camera_x, Camera_y)
+        
+        -- "Translate" type_ptr just to avoid renaming hundreds of object image file
+        local type_ptr_trans = {
+            ["1.1"] = {
+                [0x0000] = 0x0000, -- [empty]
+                [0x40F0] = 0x7E68, -- Capybara
+                [0x6149] = 0x71F0, -- Springboard
+                [0x7359] = 0x71A1, -- Capybara (sleeping)
+                [0x738C] = 0x7223, -- Baby Capybara
+                [0x73CD] = 0x7264, -- Heart
+                [0x7441] = 0x72D8, -- Save computer
+                [0x7474] = 0x730B, -- Sign
+                [0x74EB] = 0x74EB, -- Turnip Bandit
+                [0x7C63] = 0x7C8A, -- Skeleton
+                [0x7CC6] = 0x7CED, -- Cannon
+                [0x7D17] = 0x7D3E, -- Yuzu
+                [0x7D82] = 0x7DA9, -- Bat
+                [0x7DD3] = 0x7DFA, -- Flag
+                [0x7E5E] = 0x7E85, -- ???
+            },
+        }
+        if Game_version ~= "1.0" then
+            type_ptr = type_ptr_trans[Game_version][type_ptr]
+        end
         
         -- Update previous/current values frame
         Previous.object_anim[slot] = Current.object_anim[slot]
@@ -794,8 +902,8 @@ while true do
     -- Prevent cheats while recording movie
     if movie.isloaded() then OPTIONS.CHEATS = false end
     -- Read very important emu stuff
-    bizhawk_screen_info()
-    bizhawk_status()
+    biz.screen_info()
+    biz.movie_status()
     Generic_previous = Generic_current
     -- Update main game values and display these stuff
     main_game_scan()
