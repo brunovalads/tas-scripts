@@ -960,14 +960,14 @@ local function main_display()
         print(fmt("\n, width = 0x%04X, height = 0x%04X", Camera_x + 160, Camera_y + 144))
     end]]
     
-    -- Print level "identifier"
+    --[[ Print level "identifier"
     if button_Up and button_Down then
         local level_identifier = ""
         for addr = 0x0500, 0x0505 do
             level_identifier = level_identifier .. fmt("%02X", u8(addr))
         end
         print("\n\""..level_identifier.."\"")
-    end
+    end]]
     --[[
     -- Screenshot and store progress, to make the level map later
     if button_Up and button_Down then 
